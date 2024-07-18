@@ -6,10 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <title>Ajouter une Voiture</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ajouter un Client</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
@@ -41,7 +42,7 @@
             z-index: 999;
             text-align: center;
             padding: 60px 32px;
-            width: 370px;
+            width: 400px;
             transform: translate(-50%,-50%);
             background: rgba(255,255,255,0.04);
             box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
@@ -59,13 +60,14 @@
             width: 100%;
             display: flex;
             background: rgba(255,255,255,0.94);
+            margin-top: 16px;
         }
         .field span {
             color: #222;
             width: 40px;
             line-height: 45px;
         }
-        .field input {
+        .field input, .field select {
             height: 100%;
             width: 100%;
             background: transparent;
@@ -74,9 +76,6 @@
             color: #222;
             font-size: 16px;
             font-family: 'Poppins', sans-serif;
-        }
-        .space {
-            margin-top: 16px;
         }
         .field input[type="submit"] {
             background: #3498db;
@@ -87,6 +86,7 @@
             font-weight: 600;
             cursor: pointer;
             font-family: 'Montserrat', sans-serif;
+            margin-top: 16px;
         }
         .field input[type="submit"]:hover {
             background: #2691d9;
@@ -96,45 +96,37 @@
 <body>
 <div class="bg-img">
     <div class="content">
-        <header>Ajouter une Voiture</header>
-        <form action="#" method="POST">
+        <header>Ajouter un Client</header>
+        <form action="ClientController" method="post">
             <div class="field">
-                <span class="fa fa-car"></span>
-                <input type="text" name="matricule" required placeholder="Matricule">
+                <span class="fa fa-id-badge"></span>
+                <input type="text" name="identifiant" required placeholder="Identifiant">
             </div>
-            <div class="field space">
-                <span class="fa fa-car"></span>
-                <input type="text" name="nombreDePlace" required placeholder="Nombre de Place">
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="text" name="nom" required placeholder="Nom">
             </div>
-            <div class="field space">
-                <span class="fa fa-tag"></span>
-                <input type="text" name="marque" required placeholder="Marque">
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="text" name="prenom" required placeholder="Prénom">
             </div>
-            <div class="field space">
-                <span class="fa fa-car"></span>
-                <input type="text" name="model" required placeholder="Model">
+            <div class="field">
+                <span class="fa fa-calendar"></span>
+                <input type="number" name="age" required placeholder="Âge">
             </div>
-            <div class="field space">
-                <span class="fa fa-tag"></span>
-                <input type="number" name="anneeDeMiseEnService" required placeholder="Année de mise en service">
+            <div class="field">
+                <span class="fa fa-envelope"></span>
+                <input type="email" name="email" required placeholder="Email">
             </div>
-            <div class="field space">
-                <span class="fa fa-tag"></span>
-                <input type="text" name="kilomeetrage" required placeholder="Kilométrage">
+            <div class="field">
+                <span class="fa fa-map-marker-alt"></span>
+                <input type="text" name="adresse" required placeholder="Adresse">
             </div>
-            <div class="field space">
-                <span class="fa fa-palette"></span>
-                <input type="text" name="typeCarburant" required placeholder="Type de Carburant">
+            <div class="field">
+                <span class="fa fa-phone"></span>
+                <input type="tel" name="telephone" required placeholder="Téléphone">
             </div>
-            <div class="field space">
-                <span class="fa fa-info-circle"></span>
-                <input type="text" name="categorie" required placeholder="categorie">
-            </div>
-            <div class="field space">
-                <span class="fa fa-dollar-sign"></span>
-                <input type="number" name="prixDeLocationParJour" required placeholder="Prix de Location par jour">
-            </div>
-            <div class="field space">
+            <div class="field">
                 <input type="submit" value="Ajouter">
             </div>
         </form>
@@ -142,4 +134,3 @@
 </div>
 </body>
 </html>
-
