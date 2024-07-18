@@ -9,9 +9,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="initialisation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/chef.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/chef.jsp" afterDir="false" />
+=======
+    <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/demo/chart-area-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/demo/chart-bar-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/demo/chart-pie-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/demo/datatables-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/img/error-404-monochrome.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/datatables-simple-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/les_ajouts/AjoutVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/les_ajouts/AjoutClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TabGestionnaire.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/chef.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/chef.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+>>>>>>> c507641f01e72497a773f8bd26a525613cc51157
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -67,6 +86,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.DataBase.executor&quot;: &quot;Run&quot;,
@@ -90,6 +110,47 @@
   }
 }</component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.13">
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DataBase.executor": "Run",
+    "JavaScript Debug.Tomcat 10.1.24 JavaScript.executor": "Debug",
+    "JavaScript Debug.index.jsp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 10.1.23.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.24.executor": "Run",
+    "Tomcat Server.index.jsp.executor": "Run",
+    "Tomcat Server.login.jsp.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/fayea/Desktop/gesstionVoitures/src/main/webapp/Dashbord_Chef",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Dashbord_Chef" />
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Modèle W3.CSS_files" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp" />
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Dashbord_Chef" />
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\les_ajouts" />
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\WEB-INF\vue" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.24">
+>>>>>>> c507641f01e72497a773f8bd26a525613cc51157
     <configuration name="DataBase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.booles.gestionvoiture.DataBase" />
       <module name="gestionVoiture" />
@@ -103,6 +164,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="Tomcat 10.0.13" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.13" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -193,6 +255,11 @@
     <list>
       <item itemvalue="Application.DataBase" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.13" />
+=======
+    <list>
+      <item itemvalue="Application.DataBase" />
+      <item itemvalue="Tomcat Server.Tomcat 10.1.24" />
+>>>>>>> c507641f01e72497a773f8bd26a525613cc51157
     </list>
     <recent_temporary>
       <list>
@@ -221,6 +288,7 @@
       <workItem from="1720933329176" duration="1870000" />
       <workItem from="1720965965896" duration="15125000" />
       <workItem from="1720990343793" duration="7015000" />
+<<<<<<< HEAD
       <workItem from="1721142850640" duration="5439000" />
       <workItem from="1721269602387" duration="296000" />
       <workItem from="1721269912560" duration="182000" />
@@ -228,6 +296,14 @@
       <workItem from="1721270453482" duration="22000" />
       <workItem from="1721270552940" duration="1899000" />
       <workItem from="1721325403712" duration="3898000" />
+=======
+      <workItem from="1721142850640" duration="306000" />
+      <workItem from="1721171911144" duration="5462000" />
+      <workItem from="1721221524274" duration="2643000" />
+      <workItem from="1721248163170" duration="1587000" />
+      <workItem from="1721296826624" duration="243000" />
+      <workItem from="1721309859143" duration="7719000" />
+>>>>>>> c507641f01e72497a773f8bd26a525613cc51157
     </task>
     <task id="LOCAL-00001" summary="initialisation">
       <option name="closed" value="true" />

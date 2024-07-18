@@ -8,8 +8,10 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
-<a href="chef.jsp">chef</a>
-<a href="login.jsp">login</a>
+<a href="hello-servlet">Hello Servlet</a><br>
+<a href="chef.jsp">chef</a><br>
+<a href="login.jsp">login</a><br>
+<a href="gestionnaire.jsp">Tableau de bord du gestionaire</a><br>
+<a href="les_ajouts/AjoutClient.jsp">Ajouter un client</a><br>
 </body>
 </html>
