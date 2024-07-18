@@ -17,7 +17,7 @@
     <title>Page 2</title>
 </head>
 <body>
-<p>Vous êtes dans la page du chef></p>
+<p>Vous êtes dans la page du chef !</p>
 </body>
 </html>
 
