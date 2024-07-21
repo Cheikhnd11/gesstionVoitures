@@ -122,10 +122,10 @@
 <div class="bg-img">
     <div class="content">
         <header>Ajouter une Voiture</header>
-        <form action="VoitureController" method="post">
+        <form action="VoitureServlet" method="post">
             <div class="field">
                 <span class="fa fa-car"></span>
-                <input type="text" name="immatriculation" required placeholder="Immatriculation">
+                <input type="text" name="Immatriculation" required placeholder="Immatriculation">
             </div>
             <div class="field">
                 <span class="fa fa-tag"></span>
@@ -137,11 +137,11 @@
             </div>
             <div class="field">
                 <span class="fa fa-calendar-alt"></span>
-                <input type="Date" name="anneeMiseCirculation" required placeholder="Année de Mise en Circulation">
+                <input type="Date" name="anneeDeMiseEnService" required placeholder="Année de Mise en Circulation">
             </div>
             <div class="field">
                 <span class="fa fa-tachometer-alt"></span>
-                <input type="number" name="kilometrage" required placeholder="Kilométrage">
+                <input type="number" name="kilomeetrage" required placeholder="Kilométrage">
             </div>
             <div class="field">
                 <span class="fa fa-gas-pump"></span>
@@ -165,7 +165,7 @@
             </div>
             <div class="field">
                 <span class="fa fa-dollar-sign"></span>
-                <input type="number" name="prixLocationJour" required placeholder="Prix de Location par Jour">
+                <input type="number" name="prixDeLocationParJour" required placeholder="Prix de Location par Jour">
             </div>
             <div class="field">
                 <input type="submit" value="Ajouter">

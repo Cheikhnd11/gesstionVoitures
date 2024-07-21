@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DataBase {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/agence?serverTimezone=GMT&useSSL=false";
+    private static final String URL = "jdbc:mysql://localhost:3306/gestionVoiture?serverTimezone=GMT&useSSL=false";
     private static final String USER = "root";
     private static final String PASSWORD = "";
 

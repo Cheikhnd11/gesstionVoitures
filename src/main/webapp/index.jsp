@@ -12,6 +12,6 @@
 <a href="chef.jsp">chef</a><br>
 <a href="login.jsp">login</a><br>
 <a href="gestionnaire.jsp">Tableau de bord du gestionaire</a><br>
-<a href="les_ajouts/AjoutClient.jsp">Ajouter un client</a><br>
+<a href="AjoutClient.jsp">Ajouter un client</a><br>
 </body>
 </html>

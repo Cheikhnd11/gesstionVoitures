@@ -2,22 +2,23 @@ package com.booles.gestionvoiture;
 
 public class Voiture {
 
-    private String immatriculation;
+    private String Immatriculation;
     private int nombreDePlace;
     private String marque;
     private String modele;
     private int anneeDeMiseEnService;
     private  int kilomeetrage;
-
-    public Voiture() {
-    }
-
     private String typeCarburant;
     private  String categorie;
     private float prixDeLocationParJour;
 
-    public Voiture(String immatriculation, int nombreDePlace, String marque, String modele, int anneeDeMiseEnService, int kilomeetrage, String typeCarburant, String categorie, float prixDeLocationParJour) {
-        this.immatriculation = immatriculation;
+    public Voiture() {
+    }
+
+
+
+    public Voiture(String Immatriculation, int nombreDePlace, String marque, String modele, int anneeDeMiseEnService, int kilomeetrage, String typeCarburant, String categorie, float prixDeLocationParJour) {
+        this.Immatriculation = Immatriculation;
         this.nombreDePlace = nombreDePlace;
         this.marque = marque;
         this.modele = modele;
@@ -30,11 +31,11 @@ public class Voiture {
 
 
     public String getImmatriculation() {
-        return immatriculation;
+        return Immatriculation;
     }
 
     public void setImmatriculation(String immatriculation) {
-        this.immatriculation = immatriculation;
+        this.Immatriculation = immatriculation;
     }
 
     public int getNombreDePlace() {

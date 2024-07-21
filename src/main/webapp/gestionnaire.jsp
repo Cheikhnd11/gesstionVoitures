@@ -68,14 +68,14 @@
             <div class="w3-container w3-red w3-padding-16">
                 <div class="w3-left"><i class="fa fa-car w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="les_ajouts/AjoutVoiture.jsp"><h4>Ajouter Une Voiture</h4></a>
+                <a href="AjoutVoiture.jsp"><h4>Ajouter Une Voiture</h4></a>
             </div>
         </div>
         <div class="w3-quarter">
             <div class="w3-container w3-blue w3-padding-16">
                 <div class="w3-left"><i class="fa fa-user-plus w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="les_ajouts/AjoutClient.jsp"><h4>Enregistrer un client</h4></a>
+                <a href="AjoutClient.jsp"><h4>Enregistrer un client</h4></a>
             </div>
         </div>
         <div class="w3-quarter">
