@@ -97,10 +97,10 @@
 <div class="bg-img">
     <div class="content">
         <header>Ajouter un Client</header>
-        <form action="ClientController" method="post">
+        <form action="ClientServlet" method="post">
             <div class="field">
                 <span class="fa fa-id-badge"></span>
-                <input type="text" name="identifiant" required placeholder="Identifiant">
+                <input type="text" name="identifient" required placeholder="Identifient">
             </div>
             <div class="field">
                 <span class="fa fa-user"></span>
