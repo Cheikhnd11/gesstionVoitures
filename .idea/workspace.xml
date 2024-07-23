@@ -10,23 +10,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ClientServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/VoitureServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/SuppressionVoiture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/SupprimerClientServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/AfficherVoiture.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Confirmation.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Suppression.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/SuppressionVoiture.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/UpdateClient.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-3.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-3.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficheResultatVoiture.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficheResultatclient.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/confirmation.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/del.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/del1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/parking.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/recherche.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/resultatClient.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/searche.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Voiture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Voiture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/les_ajouts/AjoutClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AjoutClient.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/les_ajouts/AjoutVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" afterDir="false" />
->>>>>>> 3c410f444f2108511bb9503659c2ae5d8df1fd45
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -71,7 +82,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -82,48 +93,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DataBase.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Tomcat 10.1.24 JavaScript.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.index.jsp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.23.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.24.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.index.jsp.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.login.jsp.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/fayea/Desktop/gesstionVoitures/src/main/webapp/Dashbord_Chef&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DataBase.executor": "Run",
+    "JavaScript Debug.Tomcat 10.1.24 JavaScript.executor": "Debug",
+    "JavaScript Debug.index.jsp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 10.1.23.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.24.executor": "Run",
+    "Tomcat Server.index.jsp.executor": "Run",
+    "Tomcat Server.login.jsp.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/fayea/Desktop/gesstionVoitures/src/main/webapp/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Dashbord_Chef" />
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\img" />
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\WEB-INF\lib" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Dashbord_Chef" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Modèle W3.CSS_files" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\DELL\IdeaProjects\gestionVoiture\src\main\webapp" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp" />
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\DELL\IdeaProjects\gestionVoiture\src\main\webapp" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Dashbord_Chef" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\les_ajouts" />
-      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\WEB-INF\vue" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.24">
@@ -272,12 +285,8 @@
       <workItem from="1721248163170" duration="1587000" />
       <workItem from="1721296826624" duration="243000" />
       <workItem from="1721309859143" duration="7719000" />
-<<<<<<< HEAD
-      <workItem from="1721520296265" duration="1343000" />
-=======
-      <workItem from="1721449667901" duration="2792000" />
-      <workItem from="1721486165471" duration="4950000" />
->>>>>>> 3c410f444f2108511bb9503659c2ae5d8df1fd45
+      <workItem from="1721526186041" duration="6861000" />
+      <workItem from="1721695565419" duration="11241000" />
     </task>
     <task id="LOCAL-00001" summary="initialisation">
       <option name="closed" value="true" />
@@ -296,5 +305,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialisation" />
     <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/index.jsp</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/index.jsp</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

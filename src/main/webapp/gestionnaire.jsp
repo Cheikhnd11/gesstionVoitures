@@ -115,14 +115,14 @@
             <div class="w3-container w3-red w3-padding-16">
                 <div class="w3-left"><i class="fa fa-trash w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href=""><h4>Supprimer Une Voiture</h4></a>
+                <a href="SuppressionVoiture.jsp"><h4>Supprimer Une Voiture</h4></a>
             </div>
         </div>
         <div class="w3-quarter">
             <div class="w3-container w3-blue w3-padding-16">
                 <div class="w3-left"><i class="fa fa-user-times w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href=""><h4>Supprimer un client</h4></a>
+                <a href="Suppression.jsp"><h4>Supprimer un client</h4></a>
             </div>
         </div>
     </div>
