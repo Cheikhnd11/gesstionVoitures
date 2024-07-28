@@ -82,10 +82,10 @@
 <body>
 <div class="container">
     <div class="form-section">
-        <h2>Supprimer un Client</h2>
+        <h2>Supprimer une Voiture </h2>
         <form action="SupprimerVoiture" method="post">
             <div class="field">
-                <label for="clientId">ID du Client :</label>
+                <label>Matricule :</label>
                 <input type="text" id="clientId" name="matricule" required>
             </div>
             <div class="field">

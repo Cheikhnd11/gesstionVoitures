@@ -21,103 +21,97 @@
             box-sizing: border-box;
             user-select: none;
         }
-        .bg-img {
-            background: url('bg.jpg');
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
+            background: #f2f2f2;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .image-section {
+            width: 40%;
+            background: url('update-image.jpg') no-repeat center center;
             background-size: cover;
-            background-position: center;
         }
-        .bg-img:after {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: rgba(0,0,0,0.7);
+        .form-section {
+            width: 60%;
+            padding: 40px;
         }
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: 999;
-            text-align: center;
-            padding: 60px 32px;
-            width: 400px;
-            transform: translate(-50%,-50%);
-            background: rgba(255,255,255,0.04);
-            box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
-        }
-        .content header {
-            color: white;
-            font-size: 33px;
+        .form-section header {
+            font-size: 28px;
             font-weight: 600;
-            margin: 0 0 35px 0;
-            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            color: #333;
         }
         .field {
             position: relative;
-            height: 45px;
+            height: 50px;
             width: 100%;
             display: flex;
-            background: rgba(255,255,255,0.94);
-            margin-top: 16px;
+            background: #f9f9f9;
+            margin-top: 12px;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
         }
         .field span {
-            color: #222;
+            color: #007bff;
             width: 40px;
-            line-height: 45px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
         }
         .field input, .field select {
             height: 100%;
-            width: 100%;
+            width: calc(100% - 40px);
             background: transparent;
             border: none;
             outline: none;
-            color: #222;
+            color: #333;
             font-size: 16px;
-            font-family: 'Poppins', sans-serif;
         }
         .field input[type="submit"] {
-            background: #3498db;
-            border: 1px solid #2691d9;
+            background: #007bff;
+            border: none;
             color: white;
             font-size: 18px;
             letter-spacing: 1px;
             font-weight: 600;
             cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            margin-top: 16px;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
         }
         .field input[type="submit"]:hover {
-            background: #2691d9;
+            background: #0056b3;
         }
         .message {
             margin-bottom: 20px;
-            color: #f00;
+            color: #dc3545;
         }
     </style>
 </head>
 <body>
-<div class="bg-img">
-    <div class="content">
-        <header><c:choose>
-            <c:when test="${not empty client.identifiant}">Modifier un Client</c:when>
-            <c:otherwise>Ajouter un Client</c:otherwise>
-        </c:choose></header>
-        <c:if test="${not empty message}">
-            <div class="message"><c:out value="${message}"/></div>
-        </c:if>
-        <form action="ClientServlet" method="post">
-            <!-- Champ caché pour indiquer l'action -->
-            <input type="hidden" name="action" value="<c:choose>
-                <c:when test="${not empty client.identifiant}">update</c:when>
-                <c:otherwise>add</c:otherwise>
-            </c:choose>">
+<div class="container">
+    <div class="image-section">
+        <!-- Vous pouvez mettre une image pertinente pour la mise à jour ici -->
+    </div>
+    <div class="form-section">
 
+        <form action="UpdateClientServlet" method="post">
             <div class="field">
                 <span class="fa fa-id-badge"></span>
-                <input type="text" name="identifiant" required placeholder="Identifiant" value="<c:out value='${client.identifiant}'/>">
+                <input type="text" name="identifient" value="<c:out value='${client.identifient}'/>" readonly>
             </div>
             <div class="field">
                 <span class="fa fa-user"></span>
@@ -144,10 +138,8 @@
                 <input type="tel" name="telephone" value="<c:out value='${client.telephone}'/>">
             </div>
             <div class="field">
-                <input type="submit" value="<c:choose>
-                    <c:when test="${not empty client.identifiant}">Mettre à jour</c:when>
-                    <c:otherwise>Ajouter</c:otherwise>
-                </c:choose>">
+                <input type="submit" value="Mettre a jour">
+
             </div>
         </form>
     </div>

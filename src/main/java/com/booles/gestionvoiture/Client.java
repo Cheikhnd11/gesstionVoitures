@@ -54,7 +54,7 @@ public class Client {
     public String getNom() {
         return nom;
     }
-    public Client(int identifient, String nom, String prenom, int age, String email, String adresse) {
+    public Client() {
         super();
         this.identifient = identifient;
         this.nom = nom;
@@ -118,4 +118,7 @@ public class Client {
         this.adresse = adresse;
     }
 
+    public void setIdentifiant(int identifiant) {
+        this.identifient = identifiant;
+    }
 }
