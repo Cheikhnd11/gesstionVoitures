@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.booles.gestionvoiture.Utilisateur" %><%--
   Created by IntelliJ IDEA.
   User: DELL
   Date: 14/07/2024
@@ -6,7 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
 <html lang="fr">
 <head>
     <meta charset="utf-8" />
@@ -29,20 +28,16 @@
         }
     </style>
 </head>
-<<<<<<< HEAD
-<body>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Page 2</title>
-</head>
-<body>
-<p>Vous êtes dans la page du chef !</p>
-</body>
-</html>
-
-=======
 <body class="sb-nav-fixed">
+<%
+    Utilisateur user = (Utilisateur) request.getAttribute("user");
+    String prenom = "";
+    String nom = "";
+    if (user != null) {
+        prenom = user.getPrenom();
+        nom = user.getNom();
+    }
+%>
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <a class="navbar-brand ps-3" href="index.html">Bool's Agence</a>
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
@@ -92,7 +87,7 @@
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Bienvenue, Chef d'Agence</h1>
+                <h3 class="mt-4">Bienvenu(e), <%= prenom %> <strong><%= nom %><strong/></h3>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item active">Mon Tableau de Bord</li>
                 </ol>
@@ -167,6 +162,5 @@
 <script src="assets/demo/chart-bar-demo.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
 <script src="js/datatables-simple-demo.js"></script>
->>>>>>> c507641f01e72497a773f8bd26a525613cc51157
 </body>
 </html>

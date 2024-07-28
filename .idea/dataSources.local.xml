@@ -7,5 +7,11 @@
       <user-name>root</user-name>
       <schema-mapping />
     </data-source>
+    <data-source name="agence@localhost" uuid="b8971753-732e-42a0-9896-df9be93932d1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

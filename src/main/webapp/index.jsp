@@ -13,5 +13,13 @@
 <a href="login.jsp">login</a><br>
 <a href="gestionnaire.jsp">Tableau de bord du gestionaire</a><br>
 <a href="AjoutClient.jsp">Ajouter un client</a><br>
+
+<a href="Suppression.jsp">Suppression client</a><br>
+<a href="SuppressionVoiture.jsp">Suppression Une Voiture</a><br>
+<a href="afficherClient.jsp">Rechercher Client</a><br>
+<a href="AfficherVoiture.jsp">Rechercher Voiture</a><br>
+<a href="afficheResultatVoiture.jsp">Afficher Resultat Voiture </a><br>
+<a href="afficheResultatclient.jsp">Afficher Resultat Client</a><br>
+<a href="Confirmation.jsp">Confirmation</a><br>
 </body>
 </html>

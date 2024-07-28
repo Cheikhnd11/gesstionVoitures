@@ -5,6 +5,11 @@ import java.util.Date;
 public class Client {
 
     private int identifient;
+
+    public Client() {
+        super();
+    }
+
     private String nom;
     private String prenom;
     private int age;
