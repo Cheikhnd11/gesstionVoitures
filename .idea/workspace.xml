@@ -10,30 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ClientSearchServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/UpdateClientServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficherClientMise_a_jour.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficherTousClient.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24px.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/avatar1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/avatar2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/avatar3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/avatar5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/avatar6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/m=el_main_css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/region.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_resource.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/SuppressionVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/SuppressionVoiture.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/UpdateClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UpdateClient.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/w3.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +266,9 @@
       <workItem from="1721841555767" duration="1060000" />
       <workItem from="1722044750364" duration="10818000" />
       <workItem from="1722121303955" duration="6401000" />
-      <workItem from="1722130384188" duration="921000" />
+      <workItem from="1722130384188" duration="2354000" />
+      <workItem from="1722374332448" duration="736000" />
+      <workItem from="1722383743381" duration="5101000" />
     </task>
     <task id="LOCAL-00001" summary="initialisation">
       <option name="closed" value="true" />

@@ -1,7 +1,15 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: fayea
+  Date: 31/07/2024
+  Time: 00:32
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html lang="fr">
 <head>
-    <title>Accueil - Agence de Location</title>
+    <title>Affichage Client - Agence de Location</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -55,17 +63,18 @@
             border: 2px solid #3498db;
             border-radius: 5px;
         }
-        .btn-login {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.1em;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #3498db;
+        }
+        th {
             background-color: #3498db;
             color: white;
-            border: none;
-            border-radius: 5px;
-        }
-        .btn-login:hover {
-            background-color: #2980b9;
         }
         footer {
             margin-top: 30px;
@@ -84,14 +93,43 @@
         <img src="img/searche.jpg" alt="Recherche">
     </div>
     <div class="form-section">
-        <h1 class="main-title">La liste de tous les client</h1>
-        <p>Vous trouverez tous les personnes ayant une inscription dans cette entreprise.</p><br><br>
+        <h1 class="main-title">Liste des clients de L'Agence</h1>
+        <p>Vous trouverez toutes les personnes ayant une inscription dans cette entreprise.</p><br><br>
+
+        <div class="field">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Identifiant</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Âge</th>
+                    <th>E-mail</th>
+                    <th>Adresse</th>
+                    <th>Téléphone</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="m" items="${Client.values()}">
+                    <tr>
+                        <td><c:out value="${m.identifient}"/></td>
+                        <td><c:out value="${m.nom}"/></td>
+                        <td><c:out value="${m.prenom}"/></td>
+                        <td><c:out value="${m.age}"/></td>
+                        <td><c:out value="${m.email}"/></td>
+                        <td><c:out value="${m.adresse}"/></td>
+                        <td><c:out value="${m.telephone}"/></td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
 
     </div>
 </div>
 
 <footer class="text-center">
-    <p>Bool's Agence &copy; 2023</p>
+    <p>Bool's Agence &copy; 2024</p>
 </footer>
 
 </body>

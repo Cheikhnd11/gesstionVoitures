@@ -21,5 +21,6 @@
 <a href="afficheResultatVoiture.jsp">Afficher Resultat Voiture </a><br>
 <a href="afficheResultatclient.jsp">Afficher Resultat Client</a><br>
 <a href="Confirmation.jsp">Confirmation</a><br>
+<a href="afficherTousClient.jsp">Afficher tous Client</a><br>
 </body>
 </html>
