@@ -16,6 +16,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         html, body, h1, h2, h3, h4, h5 {font-family: "Raleway", sans-serif}
+        @keyframes blur {
+            50% {
+                filter: blur(20px);
+                transform: skew(45deg);
+            }
+        }
+
+        [anim="blur"]:not(.toggled) {
+            animation: blur 2s infinite alternate;
+        }
+
     </style>
 </head>
 <body class="w3-light-grey">
@@ -51,8 +62,8 @@
         <h5>Mises à jour & Recherche</h5>
     </div>
     <div class="w3-bar-block">
-        <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-dashboard fa-fw"></i> Aperçu</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-car fa-fw"></i> Mettre à jour une voiture</a>
+        <a href="" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-dashboard fa-fw"></i> Aperçu</a>
+        <a href="AfficheVoitureUpdate.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-car fa-fw"></i> Mettre à jour une voiture</a>
         <a href="afficherClientMise_a_jour.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i> Mettre à jour un client</a>
         <a href="afficherClient.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher un client</a>
         <a href="AfficherVoiture.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher une voiture</a>
@@ -67,7 +78,7 @@
 
     <!-- Header -->
     <header class="w3-container" style="padding-top:22px">
-        <h5><b><i class="fa fa-dashboard"></i> Mon tableau de bord</b></h5>
+        <h5 anim="blur"><b><i class="fa fa-dashboard" anim="blur"></i> Mon tableau de bord</b></h5>
     </header>
 
     <div class="w3-row-padding w3-margin-bottom">

@@ -31,6 +31,19 @@
             align-items: center;
             justify-content: space-between;
         }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(0, 255, 0, 1);
+            }
+        }
+
+        [anim="glow"]:not(.toggled) {
+            animation: glow 600ms infinite alternate;
+        }
+
         .image-section {
             flex: 1;
             text-align: center;
@@ -74,10 +87,19 @@
         <img src="img/confirmation.jpg" alt="Confirmation Image">
     </div>
     <div class="content-section">
-        <h2>Confirmation</h2>
+        <h2 anim="glow">Confirmation</h2>
         <p><c:out value="${message}"/></p>
-        <a href="gestionnaire.jsp">Retour au tableau de bord</a>
+        <a href="gestionnaire.jsp" anim="glow">Retour au tableau de bord</a>
     </div>
 </div>
+
+<script>
+    let anims = [...document.querySelectorAll("[anim]")];
+    console.log(anims);
+    let click = (el, cb) => el.addEventListener("click", cb);
+    let toggle = (el) => el.classList.toggle("toggled");
+    let clickTog = (el) => click(el, () => toggle(el));
+    anims.map(clickTog);
+</script>
 </body>
 </html>

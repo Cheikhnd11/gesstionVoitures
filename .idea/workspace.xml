@@ -10,18 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercheVoitureLOUER.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/RechercherLOUER.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficheResulatVoitureLouer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/facture.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/louer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/saisirInfoLocation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercheVoitureByMatricule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/UpdateVoitureServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/AfficheVoitureUpdate.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/UpdateVoiture.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/updateVoiture.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficherTousClient.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Voiture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Voiture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AfficherVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AfficherVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Confirmation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Confirmation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/SuppressionVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/SuppressionVoiture.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
@@ -33,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -79,37 +77,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DataBase.executor": "Run",
-    "JavaScript Debug.Tomcat 10.1.24 JavaScript.executor": "Debug",
-    "JavaScript Debug.index.jsp.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 10.1.23.executor": "Run",
-    "Tomcat Server.Tomcat 10.1.24.executor": "Run",
-    "Tomcat Server.index.jsp.executor": "Run",
-    "Tomcat Server.login.jsp.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/fayea/Desktop/gesstionVoitures/src/main/webapp/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DataBase.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Tomcat 10.1.24 JavaScript.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.index.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.23.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.24.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.index.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.login.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/fayea/Desktop/gesstionVoitures/src/main/webapp/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\img" />
@@ -281,6 +279,7 @@
       <workItem from="1722130260149" duration="1512000" />
       <workItem from="1722341161994" duration="20684000" />
       <workItem from="1722382628407" duration="4816000" />
+      <workItem from="1722453878560" duration="10523000" />
     </task>
     <task id="LOCAL-00001" summary="initialisation">
       <option name="closed" value="true" />

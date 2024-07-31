@@ -27,5 +27,6 @@
 <a href="louer.jsp">louer une voiture</a><br>
 <a href="saisirInfoLocation.jsp">Saisir info Location</a><br>
 <a href="facture.jsp">Facture</a><br>
+<a href="AfficheVoitureUpdate.jsp">Recherche Voiture</a><br>
 </body>
 </html>

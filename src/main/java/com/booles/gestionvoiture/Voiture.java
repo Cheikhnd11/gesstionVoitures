@@ -101,4 +101,6 @@ public class Voiture {
     public void setPrixDeLocationParJour(float prixDeLocationParJour) {
         this.prixDeLocationParJour = prixDeLocationParJour;
     }
+
+
 }

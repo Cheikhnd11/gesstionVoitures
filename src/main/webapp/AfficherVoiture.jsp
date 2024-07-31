@@ -109,6 +109,10 @@
                 <input type="text" id="marque" name="marque">
             </div>
             <div class="field">
+                <label for="NombredePlace">Nombre de Place :</label>
+                <input type="text" id="NombredePlace" name="nombreDePlace">
+            </div>
+            <div class="field">
                 <label for="kilometrage">Kilométrage :</label>
                 <input type="number" id="kilometrage" name="kilometrage">
             </div>
