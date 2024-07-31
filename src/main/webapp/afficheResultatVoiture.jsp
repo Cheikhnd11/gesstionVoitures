@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fayea
-  Date: 23/07/2024
-  Time: 03:21
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html lang="fr">
 <head>
     <title>Résultats de la Recherche - Agence de Location</title>
@@ -83,53 +77,45 @@
 
 <div class="container">
     <div class="image-section">
-        <!-- Remplacez le lien ci-dessous par le lien de votre image -->
         <img src="img/parking.jpg" alt="Recherche Voiture">
     </div>
     <div class="results-section">
         <h1 class="main-title">Résultats de la Recherche</h1>
 
-        <%-- Logique JSP pour afficher les résultats de recherche --%>
-        <%
-            String marque = request.getParameter("marque");
-            String kilometrage = request.getParameter("kilometrage");
-            String annee = request.getParameter("annee");
-            String carburant = request.getParameter("carburant");
-            String categorie = request.getParameter("categorie");
-            boolean hasResults = false; // Utilisez cette variable pour déterminer si des résultats existent
+        <c:if test="${!empty voitures}">
+            <table class="results-table">
+                <thead>
+                <tr>
+                    <th>Immatriculation</th>
+                    <th>Marque</th>
+                    <th>Modèle</th>
+                    <th>Année de mise en service</th>
+                    <th>Kilométrage</th>
+                    <th>Type de Carburant</th>
+                    <th>Catégorie</th>
+                    <th>Prix de location par jour</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="voiture" items="${voitures}">
+                    <tr>
+                        <td><c:out value="${voiture.immatriculation}"/></td>
+                        <td><c:out value="${voiture.marque}"/></td>
+                        <td><c:out value="${voiture.modele}"/></td>
+                        <td><c:out value="${voiture.anneeDeMiseEnService}"/></td>
+                        <td><c:out value="${voiture.kilomeetrage}"/></td>
+                        <td><c:out value="${voiture.typeCarburant}"/></td>
+                        <td><c:out value="${voiture.categorie}"/></td>
+                        <td><c:out value="${voiture.prixDeLocationParJour}"/></td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </c:if>
 
-            // Simuler des résultats de recherche pour l'exemple
-            // Remplacer par une logique réelle pour obtenir les résultats de la base de données
-            if (marque != null || kilometrage != null || annee != null || carburant != null || categorie != null) {
-                hasResults = true; // Remplacez cette ligne par une condition vérifiant la présence de résultats réels
-            }
-
-            if (hasResults) {
-        %>
-        <table class="results-table">
-            <thead>
-            <tr>
-                <th>Marque</th>
-                <th>Kilométrage</th>
-                <th>Année</th>
-                <th>Carburant</th>
-                <th>Catégorie</th>
-            </tr>
-            </thead>
-            <tbody>
-            <%-- Afficher les résultats réels ici --%>
-            <tr>
-                <td><%= marque %></td>
-                <td><%= kilometrage %></td>
-                <td><%= annee %></td>
-                <td><%= carburant %></td>
-                <td><%= categorie %></td>
-            </tr>
-            </tbody>
-        </table>
-        <% } else { %>
-        <p>Aucun résultat trouvé pour les critères de recherche fournis.</p>
-        <% } %>
+        <c:if test="${empty voitures}">
+            <p>Aucun résultat trouvé pour les critères de recherche fournis.</p>
+        </c:if>
     </div>
 </div>
 

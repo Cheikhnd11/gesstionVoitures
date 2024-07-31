@@ -6,7 +6,7 @@ public class Voiture {
     private int nombreDePlace;
     private String marque;
     private String modele;
-    private int anneeDeMiseEnService;
+    private String anneeDeMiseEnService;
     private  int kilomeetrage;
     private String typeCarburant;
     private  String categorie;
@@ -17,7 +17,7 @@ public class Voiture {
 
 
 
-    public Voiture(String Immatriculation, int nombreDePlace, String marque, String modele, int anneeDeMiseEnService, int kilomeetrage, String typeCarburant, String categorie, float prixDeLocationParJour) {
+    public Voiture(String Immatriculation, int nombreDePlace, String marque, String modele, String anneeDeMiseEnService, int kilomeetrage, String typeCarburant, String categorie, float prixDeLocationParJour) {
         this.Immatriculation = Immatriculation;
         this.nombreDePlace = nombreDePlace;
         this.marque = marque;
@@ -62,11 +62,11 @@ public class Voiture {
         this.modele = modele;
     }
 
-    public int getAnneeDeMiseEnService() {
+    public String getAnneeDeMiseEnService() {
         return anneeDeMiseEnService;
     }
 
-    public void setAnneeDeMiseEnService(int anneeDeMiseEnService) {
+    public void setAnneeDeMiseEnService(String anneeDeMiseEnService) {
         this.anneeDeMiseEnService = anneeDeMiseEnService;
     }
 

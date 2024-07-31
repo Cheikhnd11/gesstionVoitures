@@ -83,7 +83,7 @@
 <div class="container">
     <div class="form-section">
         <h2>Supprimer une Voiture</h2>
-        <form action="SupprimerVoiture" method="post">
+        <form action="SuppressionVoiture" method="post">
             <div class="field">
                 <label for="clientId">Matricule de la Voiture :</label>
                 <input type="text" id="clientId" name="matricule" required>

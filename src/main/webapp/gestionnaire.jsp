@@ -29,7 +29,7 @@
     }
 %>
 <!-- Top container -->
-<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+<div class="w3-bar w3-top w3-dark-grey w3-large" style="z-index:4">
     <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> Menu</button>
     <span class="w3-bar-item w3-right">Bool's Agence</span>
 </div>
@@ -44,20 +44,18 @@
             <span>Bienvenue, <strong><%= prenom %> <%= nom %></strong></span><br>
             <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
             <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
-            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
         </div>
     </div>
     <hr>
     <div class="w3-container">
-        <h5>Les Mise a jours </h5>
+        <h5>Mises à jour & Recherche</h5>
     </div>
     <div class="w3-bar-block">
         <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-dashboard fa-fw"></i> Aperçu</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-car fa-fw"></i> Mettre a jour une voiture</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i> Mettre a jour un client</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher un client</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher une Voiture</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cogs fa-fw"></i> Paramètres</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-car fa-fw"></i> Mettre à jour une voiture</a>
+        <a href="afficherClientMise_a_jour.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i> Mettre à jour un client</a>
+        <a href="afficherClient.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher un client</a>
+        <a href="AfficherVoiture.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher une voiture</a>
     </div>
 </nav>
 
@@ -77,7 +75,7 @@
             <div class="w3-container w3-red w3-padding-16">
                 <div class="w3-left"><i class="fa fa-car w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="AjoutVoiture.jsp"><h4>Ajouter Une Voiture</h4></a>
+                <a href="AjoutVoiture.jsp"><h4>Ajouter une voiture</h4></a>
             </div>
         </div>
         <div class="w3-quarter">
@@ -91,65 +89,63 @@
             <div class="w3-container w3-teal w3-padding-16">
                 <div class="w3-left"><i class="fa fa-handshake-o w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href=""><h4>Louer une Voiture</h4></a>
+                <a href="#"><h4>Louer une voiture</h4></a>
             </div>
         </div>
         <div class="w3-quarter">
             <div class="w3-container w3-orange w3-text-white w3-padding-16">
                 <div class="w3-left"><i class="fa fa-list-alt w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="afficherClient.jsp"><h4>Rechercher Client</h4></a>
+      <a href="#"><h4>État du parking</h4></a>
             </div>
         </div>
     </div>
     <hr>
 
     <div class="w3-row-padding w3-margin-bottom">
-
         <div class="w3-quarter">
             <div class="w3-container w3-teal w3-padding-16">
                 <div class="w3-left"><i class="fa fa-undo w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href=""><h4>Retour de Voiture</h4></a>
+                <a href="#"><h4>Retour de voiture</h4></a>
             </div>
         </div>
         <div class="w3-quarter">
             <div class="w3-container w3-orange w3-text-white w3-padding-16">
-                <div class="w3-left"><i class="fa fa-undo w3-xxxlarge"></i></div>
+                <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="AfficherVoiture.jsp"><h4>Rechercher une Voiture</h4></a>
+                <a href="ListClientsServlet"><h4>Liste des clients</h4></a>
             </div>
         </div>
         <div class="w3-quarter">
             <div class="w3-container w3-red w3-padding-16">
                 <div class="w3-left"><i class="fa fa-trash w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="SuppressionVoiture.jsp"><h4>Supprimer Une Voiture</h4></a>
+                <a href="SuppressionVoiture.jsp"><h4>Supprimer une voiture</h4></a>
             </div>
         </div>
         <div class="w3-quarter">
             <div class="w3-container w3-blue w3-padding-16">
                 <div class="w3-left"><i class="fa fa-user-times w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="Suppression.jsp"><h4>Supprimer un client</h4></a>
+                <a href="SuppressionClient.jsp"><h4>Supprimer un client</h4></a>
             </div>
         </div>
     </div>
-
 
     <br>
     <div class="w3-container w3-dark-grey w3-padding-32">
         <div class="w3-row">
             <div class="w3-container w3-third">
                 <h5 class="w3-bottombar w3-border-green">Géolocalisation</h5>
-                <p>Langue - Francais </p>
+                <p>Langue - Français</p>
                 <p>Pays - Sénégal</p>
                 <p>Ville - Diourbel</p>
             </div>
             <div class="w3-container w3-third">
                 <h5 class="w3-bottombar w3-border-red">Système</h5>
                 <p>Agence</p>
-                <p>Gestion de Voiture</p>
+                <p>Gestion de voitures</p>
             </div>
             <div class="w3-container w3-third">
                 <h5 class="w3-bottombar w3-border-blue">Contact - Support Technique</h5>

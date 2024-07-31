@@ -44,8 +44,8 @@ public class RechercherClientServlet extends HttpServlet{
                 request.getRequestDispatcher("afficheResultatclient.jsp").forward(request, response);
             } else {
                 // Utilisateur non trouvé
-                request.setAttribute("error", "Utilisateur non trouvé.");
-                request.getRequestDispatcher("afficherClient.jsp").forward(request, response);
+                request.setAttribute("identifient", identifient);
+                request.getRequestDispatcher("afficheResultatclient.jsp").forward(request, response);
             }
         } catch (IOException | SQLException e) {
             throw new RuntimeException(e);

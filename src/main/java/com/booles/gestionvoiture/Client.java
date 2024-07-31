@@ -59,15 +59,7 @@ public class Client {
     public String getNom() {
         return nom;
     }
-    public Client(int identifient, String nom, String prenom, int age, String email, String adresse) {
-        super();
-        this.identifient = identifient;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.age = age;
-        this.email = email;
-        this.adresse = adresse;
-    }
+
     /**
      * @param nom the nom to set
      */
@@ -123,4 +115,7 @@ public class Client {
         this.adresse = adresse;
     }
 
+    public void setIdentifiant(int identifiant) {
+        this.identifient = identifiant;
+    }
 }

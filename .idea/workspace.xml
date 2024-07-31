@@ -10,38 +10,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercherClientServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercherVoitureServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/SuppressionVoiture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/SupprimerClientServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/AfficherVoiture.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Confirmation.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Suppression.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/SuppressionVoiture.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/UpdateClient.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-3.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-3.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficheResultatVoiture.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficheResultatclient.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/confirmation.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/del.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/del1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/parking.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/recherche.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/resultatClient.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/searche.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ClientSearchServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ListClientsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/UpdateClientServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/RechecheListClients.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficherClientMise_a_jour.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/listClients.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/24px.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/avatar1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/avatar2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/avatar3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/avatar5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/avatar6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/m=el_main_css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/region.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_resource.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/chef.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/chef.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercherClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercherClientServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercherVoitureServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercherVoitureServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Voiture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Voiture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AfficherVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AfficherVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Suppression.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/SuppressionClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/SuppressionVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/SuppressionVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/UpdateClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UpdateClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficheResultatVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficheResultatVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficheResultatclient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficheResultatclient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/w3.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -293,6 +297,8 @@
       <workItem from="1722050817081" duration="6406000" />
       <workItem from="1722087062024" duration="5721000" />
       <workItem from="1722130260149" duration="1512000" />
+      <workItem from="1722341161994" duration="20684000" />
+      <workItem from="1722382628407" duration="4816000" />
     </task>
     <task id="LOCAL-00001" summary="initialisation">
       <option name="closed" value="true" />
@@ -311,5 +317,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialisation" />
     <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercherVoitureServlet.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

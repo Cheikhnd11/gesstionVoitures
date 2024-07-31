@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html lang="fr">
 <head>
     <title>Résultats de la Recherche - Agence de Location</title>
@@ -77,12 +78,6 @@
 </head>
 <body>
 
-<%!
-    Client client=null;
-    int identifient;
-    String nom="";
-    String prenom="";
-%>
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Bool's Agence</a>
 </nav>
@@ -96,42 +91,36 @@
         <h1 class="main-title">Résultats de la Recherche</h1>
 
         <%-- Logique JSP pour afficher les résultats de recherche --%>
-        <%
-            String clientId = request.getParameter("clientId");
-            boolean hasResults = false; // Utilisez cette variable pour déterminer si des résultats existent
-
-            // Simuler des résultats de recherche pour l'exemple
-            // Remplacer par une logique réelle pour obtenir les résultats de la base de données
-            if (clientId != null && !clientId.isEmpty()) {
-                hasResults = true; // Remplacez cette ligne par une condition vérifiant la présence de résultats réels
-            }
-
-            if (hasResults) {
-        %>
+<c:if test="${!empty client}">
         <table class="results-table">
             <thead>
             <tr>
-                <th>ID</th>
+                <th>Identifiant</th>
                 <th>Nom</th>
                 <th>Prénom</th>
+                <th>Age</th>
                 <th>Email</th>
+                <th>Adresse</th>
                 <th>Téléphone</th>
             </tr>
             </thead>
             <tbody>
             <%-- Afficher les résultats réels ici --%>
             <tr>
-                <td><%= clientId %></td>
-                <td>Nom Exemple</td>
-                <td>Prénom Exemple</td>
-                <td>email@example.com</td>
-                <td>0123456789</td>
+                <td><c:out value="${client.identifient}"/></td>
+                <td><c:out value="${client.nom}"/></td>
+                <td><c:out value="${client.prenom}"/></td>
+                <td><c:out value="${client.age}"/></td>
+                <td><c:out value="${client.email}"/></td>
+                <td><c:out value="${client.adresse}"/></td>
+                <td><c:out value="${client.telephone}"/></td>
             </tr>
             </tbody>
         </table>
-        <% } else { %>
-        <p>Aucun résultat trouvé pour l'ID de client fourni.</p>
-        <% } %>
+</c:if>
+<c:if test="${empty client}">
+       <strong> <p>Aucun résultat trouvé pour l'ID(<c:out value="${identifient}"/>) de client fourni.</p></strong>
+</c:if>
     </div>
 </div>
 

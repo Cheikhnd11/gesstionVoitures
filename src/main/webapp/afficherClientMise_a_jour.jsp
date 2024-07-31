@@ -80,15 +80,16 @@
 
 <div class="container">
     <div class="image-section">
+        <!-- Remplacez le lien ci-dessous par le lien de votre image ou icône -->
         <img src="img/searche.jpg" alt="Recherche">
     </div>
     <div class="form-section">
-        <h1 class="main-title">Bienvenue dans la zone de Recherche de Client</h1>
-        <p>Vous trouverez toutes les personnes ayant une inscription dans cette entreprise.</p><br><br>
-        <form action="RechercherClientServlet" method="post" >
+        <h1 class="main-title">Bienvenue dans la zone de Modification des Client</h1>
+        <p>Vous trouverez tous les personnes ayant une inscription dans cette entreprise.</p><br><br>
+        <form action="ClientSearchServlet" method="get" >
             <div class="field">
-                <label for="clientId">ID du Client :</label>
-                <input type="text" id="clientId" name="clientId" required>
+                <label>ID du Client :</label>
+                <input type="text" name="id" required>
             </div>
             <input type="submit" value="Rechercher" class="btn-login">
         </form>
