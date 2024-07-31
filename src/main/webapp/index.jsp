@@ -22,6 +22,10 @@
 <a href="afficheResultatVoiture.jsp">Afficher Resultat Voiture </a><br>
 <a href="afficheResultatclient.jsp">Afficher Resultat Client</a><br>
 <a href="Confirmation.jsp">Confirmation</a><br>
-<a href="afficherTousClient.jsp">Afficher tous Client</a><br>
+
+<h1>les pages que jai creer les recherche sont directement inclus de dans </h1>
+<a href="louer.jsp">louer une voiture</a><br>
+<a href="saisirInfoLocation.jsp">Saisir info Location</a><br>
+<a href="facture.jsp">Facture</a><br>
 </body>
 </html>
