@@ -96,6 +96,7 @@
         <p>Vous trouverez toutes les personnes ayant une inscription dans cette entreprise.</p><br><br>
 
         <div class="field">
+        <c:if test="${!empty clients}">
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -122,6 +123,10 @@
                 </c:forEach>
                 </tbody>
             </table>
+        </c:if>
+        <c:if test="${empty clients}">
+            <strong><p>Aucun client n'est dans la base de Donnees pour le moment</p></strong>
+        </c:if>
         </div>
 
     </div>

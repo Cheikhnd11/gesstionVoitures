@@ -10,22 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37358f6e-59b7-4729-a964-ecbe3de98a6a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercheVoitureLOUER.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/RechercherLOUER.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficheResulatVoitureLouer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/facture.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/louer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/saisirInfoLocation.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/EnregistrerLocationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Retours.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercheVoitureLOUER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercheVoitureLOUER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Voiture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Voiture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/VoitureServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/VoitureServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficheResulatVoitureLouer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficheResulatVoitureLouer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/listClients.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listClients.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/saisirInfoLocation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/saisirInfoLocation.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,15 +80,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "Merging master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Tomcat Server.Tomcat 10.1.24.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\img" />
@@ -212,10 +215,18 @@
       <item itemvalue="Tomcat Server.Tomcat 10.1.24" />
     </list>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="" />
+      <changelist id="37358f6e-59b7-4729-a964-ecbe3de98a6a" name="Changes" comment="" />
       <created>1720926074080</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -253,6 +264,8 @@
       <workItem from="1722130260149" duration="1512000" />
       <workItem from="1722341161994" duration="20684000" />
       <workItem from="1722382628407" duration="10490000" />
+      <workItem from="1722428750203" duration="16365000" />
+      <workItem from="1722465160966" duration="1531000" />
     </task>
     <task id="LOCAL-00001" summary="initialisation">
       <option name="closed" value="true" />

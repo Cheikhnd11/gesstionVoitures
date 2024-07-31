@@ -169,6 +169,10 @@
                 <input type="number" name="prixDeLocationParJour" required placeholder="Prix de Location par Jour">
             </div>
             <div class="field">
+                <span class="fa fa-dollar-sign"></span>
+                <input type="text" name="status" required placeholder="Statut en location">
+            </div>
+            <div class="field">
                 <input type="submit" value="Ajouter">
             </div>
             <div class="field">
