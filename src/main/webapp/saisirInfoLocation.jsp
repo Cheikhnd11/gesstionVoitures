@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: fayea
@@ -6,6 +7,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.time.LocalDate" %>
+<%
+    LocalDate currentDate = LocalDate.now();
+%>
+
 <html lang="fr">
 <head>
     <title>Enregistrement de Location - Agence de Location</title>
@@ -117,19 +123,19 @@
             </div>
             <div class="field">
                 <label for="voiture">Immatriculation Voiture :</label>
-                <input type="text" id="voiture" name="voiture">
+                <input type="text" id="voiture" name="voiture" value="${param.Immatriculation}" readonly>
             </div>
             <div class="field">
                 <label for="dateDebut">Date de Début :</label>
-                <input type="date" id="dateDebut" name="dateDebut">
+                <input type="date" id="dateDebut" name="dateDebut" value="<%= currentDate %>">
             </div>
             <div class="field">
                 <label for="dateFin">Date de Fin :</label>
                 <input type="date" id="dateFin" name="dateFin">
             </div>
             <div class="field">
-                <label for="nombreJour">Nombre de Jours :</label>
-                <input type="number" id="nombreJour" name="nombreJour">
+                <label for="prixParJour">Prix de location de cette voiyure par Jours :</label>
+                <input type="number" id="prixParJour" name="prix" value="${param.prixDeLocationParJour}">
             </div>
             <div class="field">
                 <label for="statutLocation">Statut de la Location :</label>
@@ -137,7 +143,7 @@
             </div>
             <div class="field">
                 <label for="kilometrage">Kilométrage :</label>
-                <input type="number" id="kilometrage" name="kilometrage">
+                <input type="number" id="kilometrage" name="kilometrage" value="${param.kilomeetrage}">
             </div>
             <input type="submit" value="Enregistrer" class="btn-submit">
         </form>

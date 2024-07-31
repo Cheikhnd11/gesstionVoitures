@@ -65,6 +65,7 @@ public class RechercheVoitureLOUER extends HttpServlet {
                     voiture.setTypeCarburant(resultSet.getString("typeCarburant"));
                     voiture.setCategorie(resultSet.getString("categorie"));
                     voiture.setPrixDeLocationParJour(resultSet.getInt("prixDeLocationParJour"));
+                    voiture.setStatus(resultSet.getString("status"));
                     voitures.add(voiture);
                 }
             }

@@ -11,13 +11,20 @@ public class Voiture {
     private String typeCarburant;
     private  String categorie;
     private float prixDeLocationParJour;
+    private String status;
 
     public Voiture() {
     }
 
+    public String getStatus() {
+        return status;
+    }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
-    public Voiture(String Immatriculation, int nombreDePlace, String marque, String modele, String anneeDeMiseEnService, int kilomeetrage, String typeCarburant, String categorie, float prixDeLocationParJour) {
+    public Voiture(String Immatriculation, int nombreDePlace, String marque, String modele, String anneeDeMiseEnService, int kilomeetrage, String typeCarburant, String categorie, float prixDeLocationParJour, String status) {
         this.Immatriculation = Immatriculation;
         this.nombreDePlace = nombreDePlace;
         this.marque = marque;
@@ -27,6 +34,7 @@ public class Voiture {
         this.typeCarburant = typeCarburant;
         this.categorie = categorie;
         this.prixDeLocationParJour = prixDeLocationParJour;
+        this.status = status;
     }
 
 

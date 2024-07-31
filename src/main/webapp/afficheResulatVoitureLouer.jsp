@@ -122,12 +122,22 @@
                         <td><c:out value="${voiture.typeCarburant}"/></td>
                         <td><c:out value="${voiture.categorie}"/></td>
                         <td><c:out value="${voiture.prixDeLocationParJour}"/></td>
-                        <td><a href="saisirInfoLocation.jsp" class="btn btn-primary btn-sm">Louer</a></td>
+                        <td>
+                            <c:choose>
+                                <c:when test="${voiture.status != 'en cours'}">
+                                    <a href="saisirInfoLocation.jsp?Immatriculation=${voiture.immatriculation}&kilomeetrage=${voiture.kilomeetrage}&prixDeLocationParJour=${voiture.prixDeLocationParJour}" class="btn btn-primary btn-sm">Louer</a>
+                                </c:when>
+                                <c:otherwise>
+                                    <span>En cours de location!</span>
+                                </c:otherwise>
+                            </c:choose>
+                        </td>
                     </tr>
                 </c:forEach>
                 </tbody>
             </table>
         </c:if>
+
 
         <c:if test="${empty voitures}">
             <p class="no-results">Aucun résultat trouvé pour les critères de recherche fournis.</p>

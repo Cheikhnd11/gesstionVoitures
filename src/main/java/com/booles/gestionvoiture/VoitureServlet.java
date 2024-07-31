@@ -38,15 +38,8 @@ public class VoitureServlet extends HttpServlet {
         String typeCarburant = request.getParameter("typeCarburant");
         String categorie = request.getParameter("categorie");
         String prixDeLocationParJourStr = request.getParameter("prixDeLocationParJour");
+        String status = request.getParameter("status");
 
-        out.println(immatriculation);
-        out.println(marque);
-        out.println(modele);
-        out.println(anneeDeMiseEnService);
-        out.println(kilometrageStr);
-        out.println(typeCarburant);
-        out.println(categorie);
-        out.println(prixDeLocationParJourStr);
 
         try {
             if (immatriculation == null || marque == null || modele == null ||
@@ -57,7 +50,7 @@ public class VoitureServlet extends HttpServlet {
             int kilomeetrage = Integer.parseInt(kilometrageStr);
             double prixDeLocationParJour = Double.parseDouble(prixDeLocationParJourStr);
 
-            addNewVoiture(immatriculation, marque, modele, anneeDeMiseEnService, kilomeetrage, typeCarburant, categorie, prixDeLocationParJour);
+            addNewVoiture(immatriculation, marque, modele, anneeDeMiseEnService, kilomeetrage, typeCarburant, categorie, prixDeLocationParJour,status);
             request.setAttribute("message", "Car added successfully");
         } catch (NumberFormatException e) {
             e.printStackTrace();
@@ -73,8 +66,8 @@ public class VoitureServlet extends HttpServlet {
         request.getRequestDispatcher("gestionnaire.jsp").forward(request, response);
     }
 
-    private void addNewVoiture(String Immatriculation, String marque, String modele, String anneeDeMiseEnService, int kilomeetrage, String typeCarburant, String categorie, double prixDeLocationParJour) throws SQLException {
-        String query = "INSERT INTO Voiture (Immatriculation, marque, modele, anneeDeMiseEnService, kilomeetrage, typeCarburant, categorie, prixDeLocationParJour) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    private void addNewVoiture(String Immatriculation, String marque, String modele, String anneeDeMiseEnService, int kilomeetrage, String typeCarburant, String categorie, double prixDeLocationParJour,String status) throws SQLException {
+        String query = "INSERT INTO Voiture (Immatriculation, marque, modele, anneeDeMiseEnService, kilomeetrage, typeCarburant, categorie, prixDeLocationParJour,status) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?)";
         try (Connection connection = DataBase.getConnection();
              PreparedStatement ps = connection.prepareStatement(query)) {
             ps.setString(1, Immatriculation);
@@ -85,6 +78,7 @@ public class VoitureServlet extends HttpServlet {
             ps.setString(6, typeCarburant);
             ps.setString(7, categorie);
             ps.setDouble(8, prixDeLocationParJour);
+            ps.setString(9, status);
             ps.executeUpdate();
         }
     }
