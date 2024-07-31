@@ -5,6 +5,11 @@ import java.util.Date;
 public class Client {
 
     private int identifient;
+
+    public Client() {
+        super();
+    }
+
     private String nom;
     private String prenom;
     private int age;
@@ -54,15 +59,7 @@ public class Client {
     public String getNom() {
         return nom;
     }
-    public Client() {
-        super();
-        this.identifient = identifient;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.age = age;
-        this.email = email;
-        this.adresse = adresse;
-    }
+
     /**
      * @param nom the nom to set
      */

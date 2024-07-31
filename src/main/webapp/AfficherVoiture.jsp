@@ -103,7 +103,7 @@
     <div class="form-section">
         <h1 class="main-title">Recherche de Voiture</h1>
         <p>Recherchez une voiture enregistrée dans notre agence.</p><br><br>
-        <form action="">
+        <form action="RechercherVoitureServlet" method="post">
             <div class="field">
                 <label for="marque">Marque :</label>
                 <input type="text" id="marque" name="marque">
@@ -120,20 +120,20 @@
                 <label for="carburant">Type de carburant :</label>
                 <select id="carburant" name="carburant">
                     <option value="">Sélectionner</option>
-                    <option value="essence">Essence</option>
-                    <option value="diesel">Diesel</option>
-                    <option value="hybride">Hybride</option>
-                    <option value="electrique">Électrique</option>
+                    <option value="Essence">Essence</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Electrique">Électrique</option>
+                    <option value="Hybride">Hybride</option>
                 </select>
             </div>
             <div class="field">
                 <label for="categorie">Catégorie :</label>
                 <select id="categorie" name="categorie">
-                    <option value="">Sélectionner</option>
-                    <option value="citadine">Citadine</option>
-                    <option value="berline">Berline</option>
-                    <option value="suv">SUV</option>
-                    <option value="monospace">Monospace</option>
+                    
+                    <option value="Citadine">Citadine</option>
+                    <option value="Berline">Berline</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Utilitaire">Utilitaire</option>
                 </select>
             </div>
             <input type="submit" value="Rechercher" class="btn-search">

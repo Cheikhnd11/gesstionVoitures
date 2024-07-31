@@ -82,10 +82,10 @@
 <body>
 <div class="container">
     <div class="form-section">
-        <h2>Supprimer une Voiture </h2>
-        <form action="SupprimerVoiture" method="post">
+        <h2>Supprimer une Voiture</h2>
+        <form action="SuppressionVoiture" method="post">
             <div class="field">
-                <label>Matricule :</label>
+                <label for="clientId">Matricule de la Voiture :</label>
                 <input type="text" id="clientId" name="matricule" required>
             </div>
             <div class="field">
@@ -95,7 +95,7 @@
         <div id="result" class="result"></div>
     </div>
     <div class="image-section">
-        <img src="img/del1.jpg" alt="Supprimer un Client">
+        <img src="img/del1.jpg" alt="Supprimer une Voiture">
     </div>
 </div>
 </body>

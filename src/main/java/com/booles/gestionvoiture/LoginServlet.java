@@ -40,8 +40,10 @@ public class LoginServlet extends HttpServlet {
                 HttpSession session = request.getSession();
                 session.setAttribute("user",user);
                 if (user.getRole().equals("chef")){
+                    request.setAttribute("user",user);
                     request.getRequestDispatcher("chef.jsp").forward(request, response);
                 }else if (user.getRole().equals("gestionnaire")){
+                    request.setAttribute("user",user);
                     request.getRequestDispatcher("gestionnaire.jsp").forward(request, response);
                 }
             }else {
@@ -64,6 +66,7 @@ public class LoginServlet extends HttpServlet {
         rs = statement.executeQuery();
         if (rs.next()){
             user = new Utilisateur();
+            user.setPrenom(rs.getString("prenom"));
             user.setNom(rs.getString("nom"));
             user.setPassword(rs.getString("password"));
             user.setRole(rs.getString("role"));

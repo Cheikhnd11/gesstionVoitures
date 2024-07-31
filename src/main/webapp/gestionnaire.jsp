@@ -1,3 +1,4 @@
+<%@ page import="com.booles.gestionvoiture.Utilisateur" %>
 <%--
   Created by IntelliJ IDEA.
   User: fayea
@@ -18,7 +19,15 @@
     </style>
 </head>
 <body class="w3-light-grey">
-
+<%
+    Utilisateur user = (Utilisateur) request.getAttribute("user");
+    String prenom = "";
+    String nom = "";
+    if (user != null) {
+        prenom = user.getPrenom();
+        nom = user.getNom();
+    }
+%>
 <!-- Top container -->
 <div class="w3-bar w3-top w3-dark-grey w3-large" style="z-index:4">
     <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> Menu</button>
@@ -32,9 +41,9 @@
             <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
         </div>
         <div class="w3-col s8 w3-bar">
-            <span>Bienvenue, <strong>Gestionnaire</strong></span><br>
-            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a> //recuperation de l'adresse email
-            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a> // Recuperation de sont role
+            <span>Bienvenue, <strong><%= prenom %> <%= nom %></strong></span><br>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
         </div>
     </div>
     <hr>
@@ -45,8 +54,8 @@
         <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-dashboard fa-fw"></i> Aperçu</a>
         <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-car fa-fw"></i> Mettre à jour une voiture</a>
         <a href="afficherClientMise_a_jour.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i> Mettre à jour un client</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher un client</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher une voiture</a>
+        <a href="afficherClient.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher un client</a>
+        <a href="AfficherVoiture.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher une voiture</a>
     </div>
 </nav>
 
@@ -87,7 +96,7 @@
             <div class="w3-container w3-orange w3-text-white w3-padding-16">
                 <div class="w3-left"><i class="fa fa-list-alt w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="#"><h4>État du parking</h4></a>
+      <a href="#"><h4>État du parking</h4></a>
             </div>
         </div>
     </div>
@@ -105,7 +114,7 @@
             <div class="w3-container w3-orange w3-text-white w3-padding-16">
                 <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="#"><h4>Liste des clients</h4></a>
+                <a href="ListClientsServlet"><h4>Liste des clients</h4></a>
             </div>
         </div>
         <div class="w3-quarter">
@@ -119,7 +128,7 @@
             <div class="w3-container w3-blue w3-padding-16">
                 <div class="w3-left"><i class="fa fa-user-times w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="Suppression.jsp"><h4>Supprimer un client</h4></a>
+                <a href="SuppressionClient.jsp"><h4>Supprimer un client</h4></a>
             </div>
         </div>
     </div>
