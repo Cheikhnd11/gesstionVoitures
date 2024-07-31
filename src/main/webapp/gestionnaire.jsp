@@ -89,7 +89,7 @@
             <div class="w3-container w3-teal w3-padding-16">
                 <div class="w3-left"><i class="fa fa-handshake-o w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="#"><h4>Louer une voiture</h4></a>
+                <a href="louer.jsp"><h4>Louer une voiture</h4></a>
             </div>
         </div>
         <div class="w3-quarter">

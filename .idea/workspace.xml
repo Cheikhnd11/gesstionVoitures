@@ -9,9 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Location.java" afterDir="false" />
+    <list default="true" id="37358f6e-59b7-4729-a964-ecbe3de98a6a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercheVoitureLOUER.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/RechercherLOUER.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/afficheResulatVoitureLouer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/facture.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/louer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/saisirInfoLocation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/listClients.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listClients.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,37 +83,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.DataBase.executor": "Run",
-    "JavaScript Debug.Tomcat 10.1.24 JavaScript.executor": "Debug",
-    "JavaScript Debug.index.jsp.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 10.1.23.executor": "Run",
-    "Tomcat Server.Tomcat 10.1.24.executor": "Run",
-    "Tomcat Server.index.jsp.executor": "Run",
-    "Tomcat Server.login.jsp.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/fayea/Desktop/gesstionVoitures/src/main/webapp/Dashbord_Chef",
+    "git-widget-placeholder": "Merging master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\img" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Dashbord_Chef" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Modèle W3.CSS_files" />
@@ -219,19 +211,6 @@
       <item itemvalue="Tomcat Server.Tomcat 10.0.13" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.24" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.DataBase" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -259,6 +238,14 @@
       <workItem from="1721248163170" duration="1587000" />
       <workItem from="1721296826624" duration="243000" />
       <workItem from="1721309859143" duration="7719000" />
+      <workItem from="1721526186041" duration="6861000" />
+      <workItem from="1721695565419" duration="11241000" />
+      <workItem from="1721841555767" duration="1060000" />
+      <workItem from="1722044750364" duration="10818000" />
+      <workItem from="1722121303955" duration="6401000" />
+      <workItem from="1722130384188" duration="2354000" />
+      <workItem from="1722374332448" duration="736000" />
+      <workItem from="1722383743381" duration="5101000" />
       <workItem from="1721449667901" duration="2792000" />
       <workItem from="1721486165471" duration="4950000" />
       <workItem from="1722050817081" duration="6406000" />

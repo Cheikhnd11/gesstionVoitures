@@ -83,6 +83,11 @@
         <img src="img/searche.jpg" alt="Recherche">
     </div>
     <div class="form-section">
+<<<<<<< HEAD
+        <h1 class="main-title">La liste de tous les client</h1>
+        <p>Vous trouverez tous les personnes ayant une inscription dans cette entreprise.</p><br><br>
+
+=======
         <h1 class="main-title">Bienvenue dans la zone de Recherche de Client</h1>
         <p>Vous trouverez toutes les personnes ayant une inscription dans cette entreprise.</p><br><br>
         <form action="RechercherClientServlet" method="post" >
@@ -92,6 +97,7 @@
             </div>
             <input type="submit" value="Rechercher" class="btn-login">
         </form>
+>>>>>>> 5a23bee09063c14f2e4af3ad9f78ce745e025d76
     </div>
 </div>
 
