@@ -67,6 +67,7 @@
         <a href="afficherClientMise_a_jour.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i> Mettre à jour un client</a>
         <a href="afficherClient.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher un client</a>
         <a href="AfficherVoiture.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher une voiture</a>
+        <a href="rechercheClient.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher une Client Donnee</a>
     </div>
 </nav>
 
@@ -107,7 +108,7 @@
             <div class="w3-container w3-orange w3-text-white w3-padding-16">
                 <div class="w3-left"><i class="fa fa-list-alt w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-      <a href="#"><h4>État du parking</h4></a>
+      <a href="etatPARKING.jsp"><h4>État du parking</h4></a>
             </div>
         </div>
     </div>
@@ -118,7 +119,7 @@
             <div class="w3-container w3-teal w3-padding-16">
                 <div class="w3-left"><i class="fa fa-undo w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-                <a href="#"><h4>Retour de voiture</h4></a>
+                <a href="Retour.jsp"><h4>Retour de voiture</h4></a>
             </div>
         </div>
         <div class="w3-quarter">

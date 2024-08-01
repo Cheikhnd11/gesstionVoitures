@@ -28,5 +28,6 @@
 <a href="saisirInfoLocation.jsp">Saisir info Location</a><br>
 <a href="facture.jsp">Facture</a><br>
 <a href="AfficheVoitureUpdate.jsp">Recherche Voiture</a><br>
+<a href="Retour.jsp">Retuour de voiture</a><br>
 </body>
 </html>
