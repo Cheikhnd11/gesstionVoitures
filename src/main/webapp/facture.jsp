@@ -61,7 +61,7 @@
     <div class="info"><span>Kilométrage :</span><c:out value="${location.kilometrage}"/> km</div>
 
     <div class="section-title">Détails de la Location</div>
-    <div class="info"><span>Montant total de la location :</span><c:out value="${location.montantTotal}"/></div>
+    <div class="info"><span>Montant total de la location :</span><c:out value="${location.montantTotal}"/>  Cfa</div>
     <div class="info"><span>Date de Début :</span><c:out value="${location.dateDebut}"/></div>
     <div class="info"><span>Date de Fin :</span><c:out value="${location.dateFin}"/></div>
     <div class="info"><span>Nombre de Jours :</span><c:out value="${location.nombreJour}"/></div> jours</div>

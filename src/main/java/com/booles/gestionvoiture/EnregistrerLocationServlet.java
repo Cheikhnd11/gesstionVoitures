@@ -45,24 +45,31 @@ public class EnregistrerLocationServlet extends HttpServlet {
             LocalDate endDate = LocalDate.parse(dateFin, formatter);
             int nombreJour = (int) ChronoUnit.DAYS.between(startDate, endDate);
 
+            Client client1= null;
+            client1 = returnClient(client);
+            //verifier si le client que concerne la location existe dans la base de donnees!
+            if (client1 == null) {
+                out.println("Le client saisi pour cette location n'est pas inscrit dans la base de donnees!");
+                return;
+            }
+
             if (nombreJour < 0) {
                 out.println("Erreur : La date de fin est avant la date de début.");
                 return;
             }
 
             float montantTotal = prixParJour * nombreJour;
+                // Enregistrement de la location
+                ajouterLocation(idLocation, client, voiture, dateDebut, dateFin, nombreJour, montantTotal, statutLocation, kilometrageActuel);
 
-            // Enregistrement de la location
-            ajouterLocation(idLocation, client, voiture, dateDebut, dateFin, nombreJour, montantTotal, statutLocation, kilometrageActuel);
+                // Récupération de la location et le client pour les affichage dans la facture
+                Location location = returnLocation(idLocation);
+                Voiture voiture1 = returnVoiture(voiture);
+                request.setAttribute("location", location);
+                request.setAttribute("client", client1);
+                request.setAttribute("voiture", voiture1);
+                request.getRequestDispatcher("facture.jsp").forward(request, response);
 
-            // Récupération de la location et le client pour les affichage dans la facture
-            Location location = returnLocation(idLocation);
-            Client client1 = returnClient(client);
-            Voiture voiture1 = returnVoiture(voiture);
-            request.setAttribute("location", location);
-            request.setAttribute("client", client1);
-            request.setAttribute("voiture", voiture1);
-            request.getRequestDispatcher("facture.jsp").forward(request, response);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -113,12 +120,13 @@ public class EnregistrerLocationServlet extends HttpServlet {
     }
 
     public Client returnClient(int idClient) {
-        Client client = new Client();
+        Client client = null;
         String query = "SELECT * FROM Client WHERE identifient = ?";
         try (Connection connection=DataBase.getConnection(); PreparedStatement ps=connection.prepareStatement(query)){
             ps.setInt(1, idClient);
             try (ResultSet rs=ps.executeQuery()) {
                 if (rs.next()) {
+                    client = new Client();
                     client.setNom(rs.getString("nom"));
                     client.setPrenom(rs.getString("prenom"));
                     client.setTelephone(rs.getString("telephone"));
