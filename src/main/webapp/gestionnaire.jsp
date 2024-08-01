@@ -24,7 +24,7 @@
         }
 
         [anim="blur"]:not(.toggled) {
-            animation: blur 2s infinite alternate;
+            animation: blur 5s infinite alternate;
         }
 
     </style>
