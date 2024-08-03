@@ -77,6 +77,19 @@
         footer {
             margin-top: 30px;
         }
+        .aa {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #257a1b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .aa:hover {
+            background-color: #ff0000;
+        }
     </style>
 </head>
 <body>
@@ -88,7 +101,8 @@
 <div class="container">
     <div class="image-section">
         <!-- Remplacez le lien ci-dessous par le lien de votre image ou icône -->
-        <img src="img/retout.jpg" alt="Recherche">
+        <img src="img/retout.jpg" alt="Recherche"><br><br><br><br>
+        <a class="aa" href="javascript:history.back()">Page précédante</a>
     </div>
     <div class="form-section">
         <h1 class="main-title">Bienvenue dans la zone de Retour de Voiture</h1>

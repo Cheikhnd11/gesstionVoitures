@@ -21,7 +21,7 @@
             user-select: none;
         }
         .bg-img {
-            background: url('bg.jpg');
+            background: url('img/Fond (10).jpg');
             height: 100vh;
             background-size: cover;
             background-position: center;
@@ -91,9 +91,25 @@
         .field input[type="submit"]:hover {
             background: #2691d9;
         }
+        .field a {
+            background: #bf13a9;
+            border: 1px solid #2691d9;
+            color: #bcced6;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            width: 100px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 16px;
+        }
+        .field a:hover {
+            background: #ff0000;
+        }
     </style>
 </head>
 <body>
+
 <div class="bg-img">
     <div class="content">
         <header>Ajouter un Client</header>
@@ -129,6 +145,11 @@
             <div class="field">
                 <input type="submit" value="Ajouter">
             </div>
+
+            <div class="field">
+                <a href="javascript:history.back()">Retour</a>
+            </div>
+
         </form>
     </div>
 </div>

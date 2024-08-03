@@ -10,21 +10,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Retour.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/VoitureDIsponiblePARKING.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/VoitureNonDisponiblePARKING.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/etatPARKING.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Fond (149).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/pngegg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/prototypeROUGE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/retout.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/rechercheClient.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/css/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/envelope-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/hero-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/location-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/map-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/telephone-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/who-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/images/youtube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/acc/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Fond (10).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Fond (124).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Fond (153).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Fond (18).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Fond (2).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Fond (24).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Fond (47).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Fond (53).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Fond (69).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/prev.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/facture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/facture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AfficheVoitureUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AfficheVoitureUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AfficherVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AfficherVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AjoutClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AjoutClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Confirmation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Confirmation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Modèle W3.CSS_files/w3.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Modèle W3.CSS_files/w3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/RechercherLOUER.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/RechercherLOUER.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Retour.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Retour.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/SuppressionClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/SuppressionClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/SuppressionVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/SuppressionVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficheResultatVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficheResultatVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficherClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficherClientMise_a_jour.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficherClientMise_a_jour.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/listClients.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listClients.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/rechercheClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/rechercheClient.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +150,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\img" />
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Dashbord_Chef" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Modèle W3.CSS_files" />
@@ -284,6 +321,7 @@
       <workItem from="1722382628407" duration="4816000" />
       <workItem from="1722453878560" duration="11144000" />
       <workItem from="1722512384953" duration="2988000" />
+      <workItem from="1722695039208" duration="983000" />
     </task>
     <task id="LOCAL-00001" summary="initialisation">
       <option name="closed" value="true" />

@@ -16,8 +16,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         body {
-            background-color: #e9ecef;
             padding: 50px;
+            background: url('img/Fond (24).jpg');
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
         }
         .navbar {
             margin-bottom: 20px;
@@ -87,6 +90,19 @@
         .btn-search:hover {
             background-color: #218838;
         }
+        a {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #257a1b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #ff0000;
+        }
         footer {
             margin-top: 30px;
             color: #6c757d;
@@ -141,6 +157,7 @@
     </div>
     <div class="image-section">
         <img src="img/recherche.jpg" alt="Recherche Voiture">
+        <a href="javascript:history.back()">Retour</a>
     </div>
 </div>
 

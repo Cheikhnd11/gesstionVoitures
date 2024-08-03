@@ -21,7 +21,7 @@
             user-select: none;
         }
         .bg-img {
-            background: url('');
+            background: url('img/21.png');
             height: 100vh;
             background-size: cover;
             background-position: center;
@@ -176,7 +176,7 @@
                 <input type="submit" value="Ajouter">
             </div>
             <div class="field">
-                <a href="javascript:history.back()" class="btn-back">Retour</a>
+                <a href="javascript:history.back()" class="btn-back" style="width: 100%">Retour</a>
             </div>
 
         </form>

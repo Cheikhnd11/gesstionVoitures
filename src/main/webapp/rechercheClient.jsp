@@ -77,6 +77,19 @@
         footer {
             margin-top: 30px;
         }
+        .aa {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #4b00bf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .aa:hover {
+            background-color: #ffdf00;
+        }
     </style>
 </head>
 <body>
@@ -88,7 +101,8 @@
 <div class="container">
     <div class="image-section">
         <!-- Remplacez le lien ci-dessous par le lien de votre image ou icône -->
-        <img src="img/Fond%20(149).png" alt="Recherche">
+        <img src="img/Fond%20(149).png" alt="Recherche"><br><br><br>
+        <a href="javascript:history.back()" class="aa">Retour au tableau de bord</a>
     </div>
     <div class="form-section">
         <h1 class="main-title">Information d'un Client d'une Location</h1>

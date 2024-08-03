@@ -91,6 +91,19 @@
             margin-top: 30px;
             color: #6c757d;
         }
+        .aa {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #257a1b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .aa:hover {
+            background-color: #dd0e34;
+        }
     </style>
 </head>
 <body>
@@ -144,7 +157,8 @@
         </form>
     </div>
     <div class="image-section">
-        <img src="img/recherche.jpg" alt="Recherche Voiture">
+        <img src="img/recherche.jpg" alt="Recherche Voiture"><br><br><br>
+        <a href="javascript:history.back()" class="aa">Retour a la page d'acceuil</a>
     </div>
 </div>
 
