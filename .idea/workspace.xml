@@ -9,22 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RetourVoitureServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/VoitureDisponibleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/VoitureNonDisponibleServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/EnregistrerLocationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/EnregistrerLocationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Retour.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Retour.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/VoitureDIsponiblePARKING.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VoitureDIsponiblePARKING.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/VoitureNonDisponiblePARKING.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VoitureNonDisponiblePARKING.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficheResulatVoitureLouer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficheResulatVoitureLouer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/etatPARKING.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/etatPARKING.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/facture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/facture.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/saisirInfoLocation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/saisirInfoLocation.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,7 +272,7 @@
       <workItem from="1722695039208" duration="983000" />
       <workItem from="1722717198692" duration="336000" />
       <workItem from="1722777031402" duration="17187000" />
-      <workItem from="1722882048671" duration="13762000" />
+      <workItem from="1722882048671" duration="14374000" />
     </task>
     <task id="LOCAL-00001" summary="initialisation">
       <option name="closed" value="true" />
