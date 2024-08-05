@@ -67,6 +67,19 @@
             margin-top: 30px;
             color: #6c757d;
         }
+        .aa {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #4b00bf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .aa:hover {
+            background-color: #19af06;
+        }
     </style>
 </head>
 <body>
@@ -77,7 +90,8 @@
 
 <div class="container">
     <div class="image-section">
-        <img src="img/parking.jpg" alt="Recherche Voiture">
+        <img src="img/parking.jpg" alt="Recherche Voiture"><br><br><br>
+        <a href="javascript:history.back()" class="aa">page précédante</a>
     </div>
     <div class="results-section">
         <h1 class="main-title">Résultats de la Recherche</h1>

@@ -302,7 +302,7 @@
         <div class="footer-link padding-top--24">
 
           <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
-            <span><a href="#">© Bool's Agence</a></span>
+            <span><a href="#">© Bool's Agence- UASZ</a></span>
             <span><a href="#">Contact</a></span>
             <span><a href="#">Privacy & terms</a></span>
           </div>

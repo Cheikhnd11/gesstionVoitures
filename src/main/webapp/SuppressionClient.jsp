@@ -16,7 +16,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f7f7f7;
+            background-image: url("img/Fond (53).jpg");
         }
         .container {
             display: flex;
@@ -73,9 +73,18 @@
         .field input[type="submit"]:hover {
             background-color: #c0392b;
         }
-        .result {
+        .aa {
             margin-top: 20px;
-            color: #ff5733;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #ffdf00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .aa:hover {
+            background-color: #dd0e34;
         }
     </style>
 </head>
@@ -95,7 +104,8 @@
         <div id="result" class="result"></div>
     </div>
     <div class="image-section">
-        <img src="img/del.jpg" alt="Supprimer un Client">
+        <img src="img/del.jpg" alt="Supprimer un Client"><br><br><br>
+        <a href="javascript:history.back()" class="aa">Page précedante</a>
     </div>
 </div>
 </body>

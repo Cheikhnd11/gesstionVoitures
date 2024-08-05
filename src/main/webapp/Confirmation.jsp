@@ -17,7 +17,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #e9ecef;
+            background-image: url("img/Fond (153).png");
         }
         .container {
             background-color: white;

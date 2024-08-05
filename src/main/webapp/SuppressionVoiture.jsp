@@ -16,7 +16,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f7f7f7;
+            background-image: url("img/Fond (69).png");
         }
         .container {
             display: flex;
@@ -73,9 +73,18 @@
         .field input[type="submit"]:hover {
             background-color: #2980b9;
         }
-        .result {
+        .aa {
             margin-top: 20px;
-            color: #ff5733;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #4b00bf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .aa:hover {
+            background-color: #19af06;
         }
     </style>
 </head>
@@ -92,10 +101,11 @@
                 <input type="submit" value="Supprimer">
             </div>
         </form>
-        <div id="result" class="result"></div>
+
     </div>
     <div class="image-section">
-        <img src="img/del1.jpg" alt="Supprimer une Voiture">
+        <img src="img/del1.jpg" alt="Supprimer une Voiture"><br><br><br>
+        <a href="javascript:history.back()" class="aa">Page d'acceuil</a>
     </div>
 </div>
 </body>

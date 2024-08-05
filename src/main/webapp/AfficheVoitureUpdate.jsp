@@ -77,6 +77,19 @@
         footer {
             margin-top: 30px;
         }
+        .aa {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #dd0e34;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .aa:hover {
+            background-color: #257a1b;
+        }
     </style>
 </head>
 <body>
@@ -88,7 +101,8 @@
 <div class="container">
     <div class="image-section">
         <!-- Remplacez le lien ci-dessous par le lien de votre image ou icône -->
-        <img src="img/updateVoiture.png" alt="Recherche">
+        <img src="img/updateVoiture.png" alt="Recherche"><br><br><br>
+        <a href="javascript:history.back()" class="aa">Page Precedante</a>
     </div>
     <div class="form-section">
         <h1 class="main-title">Bienvenue dans la zone de Modification des Voiture</h1>

@@ -9,7 +9,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="" />
+    <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/aceuil/assets/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/aceuil/assets/img/bg-masthead.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/aceuil/assets/img/bg-signup.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/aceuil/assets/img/demo-image-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/aceuil/assets/img/demo-image-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/aceuil/assets/img/ipad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/aceuil/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/aceuil/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/aff/assets/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/aff/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/aff/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AjoutClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AjoutClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/RechercherLOUER.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/RechercherLOUER.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/VoitureDIsponiblePARKING.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VoitureDIsponiblePARKING.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/VoitureNonDisponiblePARKING.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VoitureNonDisponiblePARKING.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/etatPARKING.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/etatPARKING.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/Fond (10).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/Fond (124).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/Fond (149).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/Fond (153).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/Fond (18).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/Fond (2).jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/Fond (24).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/Fond (47).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/Fond (53).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/Fond (69).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +108,7 @@
     "Tomcat Server.login.jsp.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/fayea/Desktop/gesstionVoitures/src/main/webapp/img",
+    "last_opened_file_path": "C:/Users/fayea/Desktop/gesstionVoitures/src/main/webapp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,6 +128,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\img" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\Dashbord_Chef" />
       <recent name="C:\Users\fayea\Desktop\gesstionVoitures\src\main\webapp\WEB-INF" />
@@ -267,7 +299,10 @@
       <workItem from="1722341161994" duration="20684000" />
       <workItem from="1722382628407" duration="4816000" />
       <workItem from="1722453878560" duration="11144000" />
-      <workItem from="1722512384953" duration="10366000" />
+      <workItem from="1722512384953" duration="2988000" />
+      <workItem from="1722695039208" duration="983000" />
+      <workItem from="1722717198692" duration="336000" />
+      <workItem from="1722777031402" duration="17187000" />
     </task>
     <task id="LOCAL-00001" summary="initialisation">
       <option name="closed" value="true" />
@@ -294,6 +329,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercherVoitureServlet.java</url>
           <line>48</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/facture.jsp</url>
+          <line>14</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

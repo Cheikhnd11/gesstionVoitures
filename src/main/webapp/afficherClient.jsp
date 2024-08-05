@@ -70,6 +70,19 @@
         footer {
             margin-top: 30px;
         }
+        .aa {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #4b00bf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .aa:hover {
+            background-color: #ffdf00;
+        }
     </style>
 </head>
 <body>
@@ -80,7 +93,8 @@
 
 <div class="container">
     <div class="image-section">
-        <img src="img/searche.jpg" alt="Recherche">
+        <img src="img/searche.jpg" alt="Recherche"><br><br><br>
+        <a href="javascript:history.back()" class="aa">Retour</a>
     </div>
     <div class="form-section">
         <h1 class="main-title">Bienvenue dans la zone de Recherche de Client</h1>
