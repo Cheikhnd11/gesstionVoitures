@@ -9,23 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Retour.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/VoitureDIsponiblePARKING.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/VoitureNonDisponiblePARKING.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/etatPARKING.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Fond (149).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/pngegg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/prototypeROUGE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/retout.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/rechercheClient.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_1_24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/facture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/facture.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +75,7 @@
     "Tomcat Server.Tomcat 10.1.24.executor": "Run",
     "Tomcat Server.index.jsp.executor": "Run",
     "Tomcat Server.login.jsp.executor": "Run",
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/fayea/Desktop/gesstionVoitures/src/main/webapp/img",
     "node.js.detected.package.eslint": "true",
@@ -310,11 +294,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercherVoitureServlet.java</url>
           <line>48</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/facture.jsp</url>
-          <line>14</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
