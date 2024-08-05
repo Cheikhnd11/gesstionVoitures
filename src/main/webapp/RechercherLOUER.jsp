@@ -1,174 +1,130 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fayea
-  Date: 31/07/2024
-  Time: 01:53
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="fr">
+<html lang="en">
 <head>
-    <title>Recherche de Voiture - Agence de Location</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>
-        body {
-            padding: 50px;
-            background: url('img/Fond (24).jpg');
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-        }
-        .navbar {
-            margin-bottom: 20px;
-        }
-        .main-title {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #007bff;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 30px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .form-section {
-            flex: 1;
-            text-align: center;
-            padding: 20px;
-            border-right: 3px solid #28a745;
-        }
-        .image-section {
-            flex: 1;
-            text-align: center;
-            padding: 20px;
-            border-left: 3px solid #28a745;
-        }
-        .image-section img {
-            max-width: 100%;
-            height: auto;
-        }
-        .field {
-            margin-bottom: 15px;
-        }
-        .field label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #28a745;
-        }
-        .field input,
-        .field select {
-            width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-            border: 2px solid #28a745;
-            border-radius: 5px;
-            transition: border-color 0.3s;
-        }
-        .field input:focus,
-        .field select:focus {
-            border-color: #007bff;
-        }
-        .btn-search {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.1em;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .btn-search:hover {
-            background-color: #218838;
-        }
-        a {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.1em;
-            background-color: #257a1b;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        a:hover {
-            background-color: #ff0000;
-        }
-        footer {
-            margin-top: 30px;
-            color: #6c757d;
-        }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content />
+    <meta name="author" content />
+    <title>Recherche de Voiture - Bool's Agence</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="aff/assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="aff/css/styles.css" rel="stylesheet" />
 </head>
-<body>
-
-<nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Bool's Agence</a>
-</nav>
-
-<div class="container">
-    <div class="form-section">
-        <h1 class="main-title">Recherche de Voiture</h1>
-        <p>Recherchez une voiture enregistrée dans notre agence.</p><br><br>
-        <form action="RechercheVoitureLOUER" method="post">
-            <div class="field">
-                <label for="marque">Marque :</label>
-                <input type="text" id="marque" name="marque">
+<body class="d-flex flex-column">
+<main class="flex-shrink-0">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="index.html">Bool's Agence</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            <div class="field">
-                <label for="kilometrage">Kilométrage :</label>
-                <input type="number" id="kilometrage" name="kilometrage">
+        </div>
+    </nav>
+    <!-- Page content-->
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                <div class="text-center mb-5">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-search"></i></div>
+                    <h1 class="fw-bolder">RECHERCHE DE VOITURE</h1>
+                    <p class="lead fw-normal text-muted mb-0">Recherchez une voiture enregistrée dans notre agence.</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <form action="RechercheVoitureLOUER" method="post">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" type="text" id="marque" name="marque" placeholder="Marque">
+                                <label for="marque">Marque :</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" type="number" id="kilometrage" name="kilometrage" placeholder="Kilométrage">
+                                <label for="kilometrage">Kilométrage :</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" type="date" id="annee" name="annee" placeholder="Année de mise en circulation">
+                                <label for="annee">Année de mise en circulation :</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <select class="form-control" id="carburant" name="carburant">
+                                    <option value="">Sélectionner</option>
+                                    <option value="Essence">Essence</option>
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="Electrique">Électrique</option>
+                                    <option value="Hybride">Hybride</option>
+                                </select>
+                                <label for="carburant">Type de carburant :</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <select class="form-control" id="categorie" name="categorie">
+                                    <option value="">Sélectionner</option>
+                                    <option value="Citadine">Citadine</option>
+                                    <option value="Berline">Berline</option>
+                                    <option value="SUV">SUV</option>
+                                    <option value="Utilitaire">Utilitaire</option>
+                                </select>
+                                <label for="categorie">Catégorie :</label>
+                            </div>
+                            <div class="d-grid"><button class="btn btn-primary btn-lg" type="submit">Rechercher</button></div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="field">
-                <label for="annee">Année de mise en circulation :</label>
-                <input type="date" id="annee" name="annee">
+            <!-- Contact cards-->
+            <div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-dots"></i></div>
+                    <div class="h5 mb-2">Support</div>
+                    <p class="text-muted mb-0">Chattez en direct avec un de nos spécialistes de support.</p>
+                </div>
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i></div>
+                    <div class="h5">Une multitude de fonctionnalités</div>
+                    <p class="text-muted mb-0">Explorez toutes les fonctionnalités de Bool's Agence.</p>
+                </div>
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-question-circle"></i></div>
+                    <div class="h5">Support Technique</div>
+                    <p class="text-muted mb-0">Pour tout problème, veuillez contacter le service technique.</p>
+                </div>
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-telephone"></i></div>
+                    <div class="h5">Téléphone :</div>
+                    <p class="text-muted mb-0">78-013-39-45</p>
+                    <p class="text-muted mb-0">78-171-71-98</p>
+                </div>
             </div>
-            <div class="field">
-                <label for="carburant">Type de carburant :</label>
-                <select id="carburant" name="carburant">
-                    <option value="">Sélectionner</option>
-                    <option value="Essence">Essence</option>
-                    <option value="Diesel">Diesel</option>
-                    <option value="Electrique">Électrique</option>
-                    <option value="Hybride">Hybride</option>
-                </select>
+        </div>
+    </section>
+</main>
+<!-- Footer-->
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Bool's Agence 2024</div></div>
+            <div class="col-auto">
+                <a class="link-light small" href="#!">Privacy</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="#!">Terms</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="#!">Contact</a>
             </div>
-            <div class="field">
-                <label for="categorie">Catégorie :</label>
-                <select id="categorie" name="categorie">
-
-                    <option value="Citadine">Citadine</option>
-                    <option value="Berline">Berline</option>
-                    <option value="SUV">SUV</option>
-                    <option value="Utilitaire">Utilitaire</option>
-                </select>
-            </div>
-            <input type="submit" value="Rechercher" class="btn-search">
-        </form>
+        </div>
     </div>
-    <div class="image-section">
-        <img src="img/recherche.jpg" alt="Recherche Voiture">
-        <a href="javascript:history.back()">Retour</a>
-    </div>
-</div>
-
-<footer class="text-center">
-    <p>Bool's Agence &copy; 2023</p>
 </footer>
-
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="aff/js/scripts.js"></script>
+<!-- SB Forms JS -->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 </html>
-
-
-</body>
-</html>
-

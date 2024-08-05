@@ -6,179 +6,150 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etat du Parking</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Etat du parking - Bool's Agence</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="aff/assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="aff/css/styles.css" rel="stylesheet" />
 </head>
-<body>
-<style>
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="index.html">Bool's Agence</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center justify-content-center">
+                <div class="col-lg-8 col-xl-7 col-xxl-6">
+                    <div class="my-5 text-center text-xl-start">
+                        <h1 class="display-5 fw-bolder text-white mb-2">Etat du PARKING</h1>
+                        <p class="lead fw-normal text-white-50 mb-4">Retrouver tous les voitures du Parking en un seul clic !!</p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">C'est partie</a>
+                            <a class="btn btn-outline-light btn-lg px-4" href="#!">En Savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="img/pngegg.png" alt="..." /></div>
+            </div>
+        </div>
+    </header>
 
-    * {
-        box-sizing: border-box;
-    }
+    <!-- Testimonial section-->
 
-    body {
-        background-color: #f6f5f7;
-        font-family: 'Open Sans', sans-serif;
-        margin-bottom: 50px;
-    }
+    <!-- Blog preview section-->
+    <section class="py-5">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="text-center">
+                        <h2 class="fw-bolder">Section d'affichage des différent voitures</h2>
+                        <p class="lead fw-normal text-muted mb-5">Dans cette Zone verrez les different fenetre de navigation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row gx-5">
+                <div class="col-lg-4 mb-5">
+                    <div class="card h-100 shadow border-0">
+                        <img class="card-img-top" src="img/retout.jpg" alt="..." />
+                        <div class="card-body p-4">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">DISPONIBLE</div>
+                            <a class="text-decoration-none link-dark stretched-link" href="VoitureDIsponiblePARKING.jsp"><h5 class="card-title mb-3">Les Voitures Disponible</h5></a>
+                            <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
 
-    .text-center {
-        text-align: center;
-    }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="card h-100 shadow border-0">
+                        <img class="card-img-top" src="https://dummyimage.com/600x350/adb5bd/495057" alt="..." />
+                        <div class="card-body p-4">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
+                            <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Another blog post title</h5></a>
+                            <p class="card-text mb-0">This text is a bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
 
-    .pricing-box-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="card h-100 shadow border-0">
+                        <img class="card-img-top" src="img/updateVoiture.png" alt="..." />
+                        <div class="card-body p-4">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Non DISPONIBLE</div>
+                            <a class="text-decoration-none link-dark stretched-link" href="VoitureNonDisponiblePARKING.jsp"><h5 class="card-title mb-3">Les Voitures qui sont en Location</h5></a>
+                            <p class="card-text mb-0">Some more quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
 
-    .pricing-box {
-        background-color: #ffffff;
-        box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
-        border-radius: 4px;
-        flex: 1;
-        padding: 0 30px 30px;
-        margin: 2%;
-        min-width: 250px;
-        max-width: 350px;
-    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                    <div class="mb-4 mb-xl-0">
+                        <div class="fs-3 fw-bold text-white">Votre vie Privé , notre Priorité.</div>
+                        <div class="text-white-50">Satisfaction  des client la priorité de Bools Automobile.</div>
+                    </div>
 
-    .pricing-box h5 {
-        text-transform: uppercase;
-    }
-
-    .price {
-        margin: 24px 0;
-        font-size: 36px;
-        font-weight: 900;
-    }
-
-    .price sub, .price sup {
-        font-size: 16px;
-        font-weight: 100;
-    }
-
-    .features-list {
-        padding: 0;
-        list-style-type: none;
-    }
-
-    .features-list li {
-        font-weight: 100;
-        padding: 12px 0;
-        font-weight: 100;
-    }
-
-    .features-list li:not(:last-of-type) {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .btn-primary {
-        border-radius: 25px;
-        border: none;
-        background-color: #EC1362;
-        color: #ffffff;
-        cursor: pointer;
-        padding: 10px 15px;
-        margin-top: 20px;
-        text-transform: uppercase;
-        transition: all 0.1s ease-in-out;
-    }
-
-    .btn-primary:hover {
-        box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
-        transform: translateY(-3px);
-    }
-
-    .pricing-box-bg-image {
-        background-image: url('https://images.unsplash.com/photo-1550029402-226115b7c579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80');
-        background-size: cover;
-        background-position: center center;
-        color: #ffffff;
-    }
-
-    .pricing-box-bg-image .features-list li {
-        border-bottom-color: rgba(255, 255, 255, 1);
-    }
-
-    .pricing-box-bg-image .btn-primary {
-        background-color: #ffffff;
-        color: #000;
-    }
-
-    footer {
-        background-color: #222;
-        color: #fff;
-        font-size: 14px;
-        bottom: 0;
-        position: fixed;
-        left: 0;
-        right: 0;
-        text-align: center;
-    }
-
-    footer p {
-        margin: 10px 0;
-    }
-
-    footer i {
-        color: red;
-    }
-
-    footer a {
-        color: #3C97BF;
-        text-decoration: none;
-    }
-</style>
-<h1 class="text-center">Découvrez Notre Sélection de Voitures de Location</h1>
-
-<div class="pricing-box-container">
-    <div class="pricing-box text-center">
-        <h5>Voitures Disponibles à la Location</h5>
-        <p class="price"><sup></sup>0<sub> disponibles</sub></p>
-        <ul class="features-list">
-            <li><strong>Luxueuses</strong> et Confortables</li>
-            <li><strong>Économiques</strong> et Écologiques</li>
-            <li><strong>Sécurité</strong> et Fiabilité</li>
-        </ul>
-        <a href="VoitureDIsponiblePARKING.jsp"> <button class="btn-primary">Voir plus D'information</button></a>
+                </div>
+            </aside>
+        </div>
+    </section>
+</main>
+<!-- Footer-->
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Bool's_Agence 2024</div></div>
+            <div class="col-auto">
+                <a class="link-light small" href="#!">Privacy</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="#!">Terms</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="#!">Contact</a>
+            </div>
+        </div>
     </div>
-
-    <div class="pricing-box pricing-box-bg-image text-center">
-        <h5>Responsable</h5>
-
-        <ul class="features-list">
-            <li><strong>Véhicules de Prestige</strong></li>
-            <li><strong>Assistance 24/7</strong></li>
-            <li><strong>Entretien Inclus</strong></li>
-            <li><strong>Service VIP</strong></li>
-            <li><strong>Navigation GPS</strong></li>
-            <li><strong>Wi-Fi Gratuit</strong></li>
-        </ul>
-    </div>
-
-    <div class="pricing-box text-center">
-        <h5>Voitures Non Louées</h5>
-        <p class="price"><sup></sup>0<sub> disponibles</sub></p>
-        <ul class="features-list">
-            <li>Robustes et Fiables</li>
-            <li><strong>100%</strong> Garantie de Satisfaction</li>
-            <li>Modèles Rares</li>
-            <li>Pure Plaisir de Conduite</li>
-        </ul>
-        <a href="VoitureNonDisponiblePARKING.jsp"><button class="btn-primary">Voir plus D'information</button></a>
-    </div>
-</div>
-
-
-<footer>
-    <p>Bool's Agence &copy; 2023</p>
 </footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
 </body>
 </html>
