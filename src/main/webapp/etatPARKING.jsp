@@ -75,7 +75,7 @@
                         <img class="card-img-top" src="img/retout.jpg" alt="..." />
                         <div class="card-body p-4">
                             <div class="badge bg-primary bg-gradient rounded-pill mb-2">DISPONIBLE</div>
-                            <a class="text-decoration-none link-dark stretched-link" href="VoitureDIsponiblePARKING.jsp"><h5 class="card-title mb-3">Les Voitures Disponible</h5></a>
+                            <a class="text-decoration-none link-dark stretched-link" href="VoitureDisponibleServlet"><h5 class="card-title mb-3">Les Voitures Disponible</h5></a>
                             <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                         <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
@@ -106,7 +106,7 @@
                         <img class="card-img-top" src="img/updateVoiture.png" alt="..." />
                         <div class="card-body p-4">
                             <div class="badge bg-primary bg-gradient rounded-pill mb-2">Non DISPONIBLE</div>
-                            <a class="text-decoration-none link-dark stretched-link" href="VoitureNonDisponiblePARKING.jsp"><h5 class="card-title mb-3">Les Voitures qui sont en Location</h5></a>
+                            <a class="text-decoration-none link-dark stretched-link" href="VoitureNonDisponibleServlet"><h5 class="card-title mb-3">Les Voitures qui sont en Location</h5></a>
                             <p class="card-text mb-0">Some more quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                         <div class="card-footer p-4 pt-0 bg-transparent border-top-0">

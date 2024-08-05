@@ -124,7 +124,7 @@
                         <td><c:out value="${voiture.prixDeLocationParJour}"/></td>
                         <td>
                             <c:choose>
-                                <c:when test="${voiture.status != 'en cours'}">
+                                <c:when test="${voiture.status != 'en cours de location'}">
                                     <a href="saisirInfoLocation.jsp?Immatriculation=${voiture.immatriculation}&kilomeetrage=${voiture.kilomeetrage}&prixDeLocationParJour=${voiture.prixDeLocationParJour}" class="btn btn-primary btn-sm">Louer</a>
                                 </c:when>
                                 <c:otherwise>

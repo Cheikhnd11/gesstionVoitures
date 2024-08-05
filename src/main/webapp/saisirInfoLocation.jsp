@@ -135,15 +135,15 @@
             </div>
             <div class="field">
                 <label for="prixParJour">Prix de location de cette voiyure par Jours :</label>
-                <input type="number" id="prixParJour" name="prix" value="${param.prixDeLocationParJour}">
+                <input type="number" id="prixParJour" name="prix" value="${param.prixDeLocationParJour}" readonly>
             </div>
             <div class="field">
                 <label for="statutLocation">Statut de la Location :</label>
-                <input type="text" id="statutLocation" name="statutLocation">
+                <input type="text" id="statutLocation" name="statutLocation" value="en cours" readonly>
             </div>
             <div class="field">
                 <label for="kilometrage">Kilométrage :</label>
-                <input type="number" id="kilometrage" name="kilometrage" value="${param.kilomeetrage}">
+                <input type="number" id="kilometrage" name="kilometrage" value="${param.kilomeetrage}" readonly>
             </div>
             <input type="submit" value="Enregistrer" class="btn-submit">
         </form>

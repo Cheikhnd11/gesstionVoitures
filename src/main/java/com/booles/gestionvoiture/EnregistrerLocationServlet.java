@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -47,6 +48,12 @@ public class EnregistrerLocationServlet extends HttpServlet {
 
             Client client1= null;
             client1 = returnClient(client);
+            String nom=client1.getNom();
+            String prenom=client1.getPrenom();
+            String telephone=client1.getTelephone();
+            Voiture voiture1= null;
+            voiture1 = returnVoiture(voiture);
+            String marque=voiture1.getMarque();
             //verifier si le client que concerne la location existe dans la base de donnees!
             if (client1 == null) {
                 out.println("Le client saisi pour cette location n'est pas inscrit dans la base de donnees!");
@@ -62,12 +69,18 @@ public class EnregistrerLocationServlet extends HttpServlet {
                 // Enregistrement de la location
                 ajouterLocation(idLocation, client, voiture, dateDebut, dateFin, nombreJour, montantTotal, statutLocation, kilometrageActuel);
 
+                ajouterFacture(idLocation,nom,prenom,telephone,voiture,kilometrageActuel,marque,nombreJour,montantTotal,dateDebut);
+
+                updateSatutVoiture(voiture);
+                HttpSession session = request.getSession();
+                Utilisateur responsable = (Utilisateur) session.getAttribute("user");
+
                 // Récupération de la location et le client pour les affichage dans la facture
                 Location location = returnLocation(idLocation);
-                Voiture voiture1 = returnVoiture(voiture);
                 request.setAttribute("location", location);
                 request.setAttribute("client", client1);
                 request.setAttribute("voiture", voiture1);
+                request.setAttribute("responsable", responsable);
                 request.getRequestDispatcher("facture.jsp").forward(request, response);
 
 
@@ -89,6 +102,26 @@ public class EnregistrerLocationServlet extends HttpServlet {
             ps.setFloat(7, montantTotal);
             ps.setString(8, statutLocation);
             ps.setInt(9, kilometrageActuel);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void ajouterFacture(int idFacture,String nomClient,String prenomClient,String telephoneClient,String matriculeVoiture,int kilometrage,String marque,int nbjr,float montant,String date){
+        String query="INSERT INTO Facture(idFacture,nomClient,PrenomClient,TelephonneClient,matriculeVoiture,kilometrageVoiture,marqueVoiture,nombreJour,montantTotal,dateFacture) VALUES (?,?,?,?,?,?,?,?,?,?)";
+        try(Connection connection=DataBase.getConnection();
+        PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setInt(1, idFacture);
+            ps.setString(2, nomClient);
+            ps.setString(3, prenomClient);
+            ps.setString(4, telephoneClient);
+            ps.setString(5, matriculeVoiture);
+            ps.setInt(6, kilometrage);
+            ps.setString(7, marque);
+            ps.setInt(8, nbjr);
+            ps.setFloat(9, montant);
+            ps.setString(10, date);
             ps.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -152,6 +185,16 @@ public class EnregistrerLocationServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
         return voiture;
+    }
+    public void updateSatutVoiture(String matricule){
+        String query = "UPDATE Voiture SET status = 'en cours de location' WHERE Immatriculation = ?";
+        try(Connection connection=DataBase.getConnection();
+        PreparedStatement ps=connection.prepareStatement(query)) {
+            ps.setString(1, matricule);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

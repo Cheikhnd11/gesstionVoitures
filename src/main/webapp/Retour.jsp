@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.Date" %><%--
   Created by IntelliJ IDEA.
   User: fayea
   Date: 01/08/2024
@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.time.LocalDate" %>
+<%
+    LocalDate currentDate = LocalDate.now();
+%>
 <html lang="fr">
 <head>
     <title>Accueil - Agence de Location</title>
@@ -107,19 +111,23 @@
     <div class="form-section">
         <h1 class="main-title">Bienvenue dans la zone de Retour de Voiture</h1>
 
-        <form action="" method="get" >
+        <form action="RetourVoitureServlet" method="post" >
             <div class="field">
-                <label>ID du Client :</label>
-                <input type="text" name="id" required>
+                <label>ID du Retour :</label>
+                <input type="number" name="id" required>
             </div>
 
             <div class="field">
                 <label>ID Location :</label>
-                <input type="text" name="idLocation" required>
+                <input type="number" name="idLocation" required>
             </div>
             <div class="field">
-                <label>Kilometrage :</label>
-                <input type="number" name="id" required>
+                <label>Kilometrage de retours :</label>
+                <input type="number" name="km" required>
+            </div>
+            <div class="field">
+                <label>Date de retours :</label>
+                <input type="date" name="date" required value="<%= currentDate %>" readonly>
             </div>
             <input type="submit" value="Valider" class="btn-login">
         </form>

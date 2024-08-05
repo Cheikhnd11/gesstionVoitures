@@ -5,6 +5,7 @@
   Time: 17:36
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="fr>
@@ -75,24 +76,28 @@
 
             <!--La zone d'affichages des voiture -->
             <c:forEach var="voiture" items="${voitures}">
-            <c:if test="${voiture.status == 'disponibles'}">
 
             <div class="row gx-5">
                 <div class="col-lg-4 mb-5">
                     <div class="card h-100 shadow border-0">
                         <div class="card-body p-4">
                             <div class="badge bg-primary bg-gradient rounded-pill mb-2">Marque: <c:out value="${voiture.marque}"/></div>
-                            <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Modèle: <c:out value="${voiture.modele}"/></h5></a>
+                            <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3">Modèle: <c:out value="${voiture.modele}"/></h5></a>
                             <p class="card-text mb-0"> Immatriculation: <c:out value="${voiture.immatriculation}"/></p>
+                            <p class="card-text mb-0"> Nombre de places: <c:out value="${voiture.nombreDePlace}"/></p>
+                            <p class="card-text mb-0"> Modele: <c:out value="${voiture.modele}"/></p>
+                            <p class="card-text mb-0"> Annee de mise en Service: <c:out value="${voiture.anneeDeMiseEnService}"/></p>
+                            <p class="card-text mb-0"> Kilometrage: <c:out value="${voiture.kilomeetrage}"/></p>
+                            <p class="card-text mb-0"> Categorie: <c:out value="${voiture.categorie}"/></p>
                             <p class="card-text mb-0">Type de carburant: <c:out value="${voiture.typeCarburant}"/> </p>
                             <p class="card-text mb-0">Prix par jour: <c:out value="${voiture.prixDeLocationParJour}"/> fcfa </p>
+                            <p class="card-text mb-0"> Statut: <c:out value="${voiture.status}"/></p>
 
                         </div>
                         <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                         </div>
                     </div>
                 </div>
-                </c:if>
                 </c:forEach>
 
 

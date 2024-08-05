@@ -103,7 +103,7 @@
         <div>Prénom: <c:out value="${responsable.prenom}"/></div>
         <div>Email: <c:out value="${responsable.email}"/></div>
     </div>
-    <h1>Facture N° : 1023</h1><br><br><br>
+    <h1>Facture N° : <c:out value="${location.idLocation}"/></h1><br><br><br>
 
     <div class="section-title">Informations Client</div>
     <div class="info"><span>Nom :</span> <c:out value="${client.nom}"/></div>
