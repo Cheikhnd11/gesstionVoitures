@@ -1,30 +1,56 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fayea
-  Date: 01/08/2024
-  Time: 17:36
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
-<html lang="fr>
+<html lang="fr">
 <head>
     <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="" />
-<meta name="author" content="" />
-<title>Les Voiture Dispo - Bool's Agence</title>
-<!-- Favicon-->
-<link rel="icon" type="image/x-icon" href="aff/assets/favicon.ico" />
-<!-- Bootstrap icons-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-<!-- Core theme CSS (includes Bootstrap)-->
-<link href="aff/css/styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Les Voitures Dispo - Bool's Agence</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="aff/assets/favicon.ico" />
+    <!-- Bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="aff/css/styles.css" rel="stylesheet" />
+    <!-- Custom Styles -->
+    <style>
+        .btn-client {
+            background-color: #007bff; /* Couleur principale */
+            color: white;
+            border: none;
+            border-radius: 0.375rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-client:hover {
+            background-color: #0056b3; /* Couleur au survol */
+            transform: translateY(-2px);
+        }
+        .btn-client:active {
+            background-color: #004085; /* Couleur lors du clic */
+            transform: translateY(0);
+        }
+        .card-body {
+            position: relative;
+        }
+        .card-footer {
+            text-align: center;
+        }
+        .card-footer form {
+            margin: 0;
+        }
+        .card-footer .btn-client {
+            width: 100%;
+        }
+    </style>
 </head>
 <body class="d-flex flex-column h-100">
 <main class="flex-shrink-0">
-    <!-- Navigation-->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-5">
             <a class="navbar-brand" href="index.html">Bool's Agence</a>
@@ -34,19 +60,18 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Header-->
+    <!-- Header -->
     <header class="bg-dark py-5">
         <div class="container px-5">
             <div class="row gx-5 align-items-center justify-content-center">
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
-                        <h1 class="display-5 fw-bolder text-white mb-2">Les Voiture Louées</h1>
-                        <p class="lead fw-normal text-white-50 mb-4">Retrouver tous les voitures de l'Agence qui ont etait louéer!!</p>
+                        <h1 class="display-5 fw-bolder text-white mb-2">Les Voitures Louées</h1>
+                        <p class="lead fw-normal text-white-50 mb-4">Retrouvez toutes les voitures de l'Agence qui ont été louées !</p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                             <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Started</a>
                             <a class="btn btn-outline-light btn-lg px-4" href="#!">En Savoir plus</a>
@@ -58,9 +83,7 @@
         </div>
     </header>
 
-    <!-- Testimonial section-->
-
-    <!-- Blog preview section-->
+    <!-- Blog preview section -->
     <section class="py-5">
         <div class="container px-5 my-5">
             <div class="row gx-5 justify-content-center">
@@ -71,56 +94,54 @@
                 </div>
             </div>
 
-
-
-
-            <!--La zone d'affichages des voiture -->
+            <!-- Zone d'affichage des voitures -->
             <c:forEach var="voiture" items="${voitures}">
-
-            <div class="row gx-5">
-                <div class="col-lg-4 mb-5">
-                    <div class="card h-100 shadow border-0">
-                        <div class="card-body p-4">
-                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Marque: <c:out value="${voiture.marque}"/></div>
-                            <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3">Modèle: <c:out value="${voiture.modele}"/></h5></a>
-                            <p class="card-text mb-0"> Immatriculation: <c:out value="${voiture.immatriculation}"/></p>
-                            <p class="card-text mb-0"> Nombre de places: <c:out value="${voiture.nombreDePlace}"/></p>
-                            <p class="card-text mb-0"> Modele: <c:out value="${voiture.modele}"/></p>
-                            <p class="card-text mb-0"> Annee de mise en Service: <c:out value="${voiture.anneeDeMiseEnService}"/></p>
-                            <p class="card-text mb-0"> Kilometrage: <c:out value="${voiture.kilomeetrage}"/></p>
-                            <p class="card-text mb-0"> Categorie: <c:out value="${voiture.categorie}"/></p>
-                            <p class="card-text mb-0">Type de carburant: <c:out value="${voiture.typeCarburant}"/> </p>
-                            <p class="card-text mb-0">Prix par jour: <c:out value="${voiture.prixDeLocationParJour}"/> fcfa </p>
-                            <p class="card-text mb-0"> Statut: <c:out value="${voiture.status}"/></p>
-
-                        </div>
-                        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Marque: <c:out value="${voiture.marque}"/></div>
+                                <a class="text-decoration-none link-dark stretched-link">
+                                    <h5 class="card-title mb-3">Modèle: <c:out value="${voiture.modele}"/></h5>
+                                </a>
+                                <p class="card-text mb-0">Immatriculation: <c:out value="${voiture.immatriculation}"/></p>
+                                <p class="card-text mb-0">Nombre de places: <c:out value="${voiture.nombreDePlace}"/></p>
+                                <p class="card-text mb-0">Année de mise en Service: <c:out value="${voiture.anneeDeMiseEnService}"/></p>
+                                <p class="card-text mb-0">Kilométrage: <c:out value="${voiture.kilomeetrage}"/></p>
+                                <p class="card-text mb-0">Catégorie: <c:out value="${voiture.categorie}"/></p>
+                                <p class="card-text mb-0">Type de carburant: <c:out value="${voiture.typeCarburant}"/></p>
+                                <p class="card-text mb-0">Prix par jour: <c:out value="${voiture.prixDeLocationParJour}"/> FCFA</p>
+                                <p class="card-text mb-0">Statut: <c:out value="${voiture.status}"/></p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <form action="ClientDeLocationServlet" method="post">
+                                    <input type="hidden" name="idVoiture" value="${voiture.immatriculation}">
+                                    <button type="submit" class="btn-client"><i class="bi bi-person-fill"></i> Afficher Client</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-                </c:forEach>
+            </c:forEach>
 
-
-
-
-            </div>
             <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
                 <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
                     <div class="mb-4 mb-xl-0">
-                        <div class="fs-3 fw-bold text-white">Votre vie Privé , notre Priorité.</div>
-                        <div class="text-white-50">Satisfaction  des client la priorité de Bools Automobile.</div>
+                        <div class="fs-3 fw-bold text-white">Votre vie privée, notre priorité.</div>
+                        <div class="text-white-50">Satisfaction des clients, la priorité de Bool's Agence.</div>
                     </div>
-
                 </div>
             </aside>
         </div>
     </section>
 </main>
-<!-- Footer-->
+<!-- Footer -->
 <footer class="bg-dark py-4 mt-auto">
     <div class="container px-5">
         <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-            <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Bool's_Agence 2024</div></div>
+            <div class="col-auto">
+                <div class="small m-0 text-white">Copyright &copy; Bool's Agence 2024</div>
+            </div>
             <div class="col-auto">
                 <a class="link-light small" href="#!">Privacy</a>
                 <span class="text-white mx-1">&middot;</span>
@@ -131,9 +152,9 @@
         </div>
     </div>
 </footer>
-<!-- Bootstrap core JS-->
+<!-- Bootstrap core JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
+<!-- Core theme JS -->
 <script src="js/scripts.js"></script>
 </body>
 </html>

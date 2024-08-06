@@ -118,7 +118,7 @@
                             </div>
                             <!-- Statut en location input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="text" name="status" required placeholder="Statut en Location" />
+                                <input class="form-control" type="text" name="status" required placeholder="Statut en Location" value="disponible" />
                                 <label><i class="bi bi-info-circle"></i> Statut en Location *</label>
                                 <div class="invalid-feedback">Le statut en location est obligatoire</div>
                             </div>

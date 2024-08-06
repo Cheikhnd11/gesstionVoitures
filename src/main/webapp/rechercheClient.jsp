@@ -106,7 +106,7 @@
     </div>
     <div class="form-section">
         <h1 class="main-title">Information d'un Client d'une Location</h1>
-        <form action="" method="get" >
+        <form action="ClientDeLocationServlet" method="post" >
             <div class="field">
                 <label>ID Voiture :</label>
                 <input type="text" name="idVoiture" required>

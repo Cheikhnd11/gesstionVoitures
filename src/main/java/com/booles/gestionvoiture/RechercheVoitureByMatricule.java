@@ -35,9 +35,8 @@ public class RechercheVoitureByMatricule extends HttpServlet {
             return;
         }
 
-        Voiture voiture = null;
         try {
-            voiture = getVoitureByImmatriculation(immatriculation);
+            Voiture voiture = getVoitureByImmatriculation(immatriculation);
             if (voiture == null) {
                 LOGGER.log(Level.INFO, "Voiture non trouvée pour l'immatriculation: {0}", immatriculation);
                 request.setAttribute("errorMessage", "Voiture non trouvée.");
@@ -70,15 +69,14 @@ public class RechercheVoitureByMatricule extends HttpServlet {
                     voiture.setTypeCarburant(rs.getString("typeCarburant"));
                     voiture.setCategorie(rs.getString("categorie"));
                     voiture.setPrixDeLocationParJour((float) rs.getDouble("prixDeLocationParJour"));
+                    voiture.setStatus(rs.getString("status"));
                     return voiture;
-                } else {
-                    LOGGER.log(Level.INFO, "Aucune voiture trouvée pour l'immatriculation: {0}", immatriculation);
-                    return null;
                 }
             }
         } catch (SQLException e) {
             LOGGER.log(Level.SEVERE, "Erreur SQL lors de la récupération de la voiture pour l'immatriculation: {0}", immatriculation);
             throw e;
         }
+        return null;
     }
 }

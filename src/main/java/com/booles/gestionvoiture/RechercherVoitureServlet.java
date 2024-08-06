@@ -56,6 +56,7 @@ public class RechercherVoitureServlet extends HttpServlet {
                 while (resultSet.next()) {
                     Voiture voiture = new Voiture();
                     voiture.setImmatriculation(resultSet.getString("Immatriculation"));
+                    voiture.setNombreDePlace(resultSet.getInt("nombreDePlace"));
                     voiture.setMarque(resultSet.getString("marque"));
                     voiture.setModele(resultSet.getString("modele"));
                     voiture.setKilomeetrage(resultSet.getInt("kilomeetrage"));

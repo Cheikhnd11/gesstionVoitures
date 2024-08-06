@@ -101,6 +101,7 @@
                 <thead>
                 <tr>
                     <th>Immatriculation</th>
+                    <th>Nobre de place</th>
                     <th>Marque</th>
                     <th>Modèle</th>
                     <th>Année de mise en service</th>
@@ -115,6 +116,7 @@
                 <c:forEach var="voiture" items="${voitures}">
                     <tr>
                         <td><c:out value="${voiture.immatriculation}"/></td>
+                        <td><c:out value="${voiture.nombreDePlace}"/></td>
                         <td><c:out value="${voiture.marque}"/></td>
                         <td><c:out value="${voiture.modele}"/></td>
                         <td><c:out value="${voiture.anneeDeMiseEnService}"/></td>

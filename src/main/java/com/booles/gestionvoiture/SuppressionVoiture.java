@@ -8,11 +8,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
-@WebServlet("/SupprimerVoiture")
+@WebServlet("/SuppressionVoiture")
 public class SuppressionVoiture extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -20,33 +22,48 @@ public class SuppressionVoiture extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String voitureMatricule = request.getParameter("matricule");
 
-        if (voitureMatricule != null && !voitureMatricule.isEmpty()) {
-            try {
-                boolean success = deleteVoiture(voitureMatricule);
-
-                if (success) {
-                    // Rediriger vers confirmation.jsp
-                    request.setAttribute("message", "Voiture supprimée avec succès");
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("/Confirmation.jsp");
-                    dispatcher.forward(request, response);
-                } else {
-                    response.sendError(HttpServletResponse.SC_NOT_FOUND, "Voiture non trouvée");
-                }
-            } catch (SQLException e) {
-                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Erreur de base de données: " + e.getMessage());
-            }
+        Voiture voiture = returnVoiture(voitureMatricule);
+        if (voiture == null) {
+            request.setAttribute("messageType", "error");
+            request.setAttribute("message", "Oups! Cette voiture (" + voitureMatricule + ") n'est pas dans la base de données !");
         } else {
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Immatriculation de la voiture requise");
+            try {
+                deleteVoiture(voitureMatricule);
+                request.setAttribute("messageType", "success");
+                request.setAttribute("message", "Voiture supprimée avec succès !");
+            } catch (SQLException e) {
+                request.setAttribute("messageType", "error");
+                request.setAttribute("message", "Erreur lors de la suppression de la voiture : " + e.getMessage());
+            }
         }
+        request.getRequestDispatcher("conf.jsp").forward(request, response);
     }
 
-    private boolean deleteVoiture(String immatriculation) throws SQLException {
+    private void deleteVoiture(String immatriculation) throws SQLException {
         String query = "DELETE FROM voiture WHERE Immatriculation = ?";
         try (Connection con = DataBase.getConnection();
              PreparedStatement ps = con.prepareStatement(query)) {
             ps.setString(1, immatriculation);
-            int rowsAffected = ps.executeUpdate();
-            return rowsAffected > 0;
+            ps.executeUpdate();
         }
     }
+
+    public Voiture returnVoiture(String idVoiture) {
+        Voiture voiture = null;
+        String query = "SELECT * FROM Voiture WHERE Immatriculation = ?";
+        try (Connection connection = DataBase.getConnection();
+             PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setString(1, idVoiture);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    voiture = new Voiture();
+                    voiture.setMarque(rs.getString("marque"));
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return voiture;
+    }
 }
+

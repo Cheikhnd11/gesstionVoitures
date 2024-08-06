@@ -48,6 +48,10 @@ public class EnregistrerLocationServlet extends HttpServlet {
 
             Client client1= null;
             client1 = returnClient(client);
+            if (client1 == null) {
+                out.println("Le client saisi pour cette location n'est pas inscrit dans la base de donnees!");
+                return;
+            }
             String nom=client1.getNom();
             String prenom=client1.getPrenom();
             String telephone=client1.getTelephone();
@@ -55,10 +59,6 @@ public class EnregistrerLocationServlet extends HttpServlet {
             voiture1 = returnVoiture(voiture);
             String marque=voiture1.getMarque();
             //verifier si le client que concerne la location existe dans la base de donnees!
-            if (client1 == null) {
-                out.println("Le client saisi pour cette location n'est pas inscrit dans la base de donnees!");
-                return;
-            }
 
             if (nombreJour < 0) {
                 out.println("Erreur : La date de fin est avant la date de début.");
