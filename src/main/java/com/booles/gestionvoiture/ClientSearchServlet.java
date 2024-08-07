@@ -32,7 +32,7 @@ public class ClientSearchServlet extends HttpServlet {
         if (clientIdStr == null || clientIdStr.trim().isEmpty()) {
             logger.log(Level.WARNING, "Client ID is missing.");
             request.setAttribute("errorMessage", "Client ID is missing.");
-            request.getRequestDispatcher("Error.jsp").forward(request, response);
+            request.getRequestDispatcher("errorupdateClient.jsp").forward(request, response);
             return;
         }
 
@@ -43,7 +43,7 @@ public class ClientSearchServlet extends HttpServlet {
             if (client == null) {
                 logger.log(Level.WARNING, "Client not found for ID: {0}", clientId);
                 request.setAttribute("errorMessage", "Client not found.");
-                request.getRequestDispatcher("Error.jsp").forward(request, response);
+                request.getRequestDispatcher("errorupdateClient.jsp").forward(request, response);
             } else {
                 logger.log(Level.INFO, "Client found: {0}", client);
                 request.setAttribute("client", client);
@@ -52,11 +52,11 @@ public class ClientSearchServlet extends HttpServlet {
         } catch (NumberFormatException e) {
             logger.log(Level.SEVERE, "Invalid Client ID format: {0}", clientIdStr);
             request.setAttribute("errorMessage", "Invalid Client ID format.");
-            request.getRequestDispatcher("Error.jsp").forward(request, response);
+            request.getRequestDispatcher("errorupdateClient.jsp").forward(request, response);
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error retrieving client", e);
             request.setAttribute("errorMessage", "Error retrieving client: " + e.getMessage());
-            request.getRequestDispatcher("Error.jsp").forward(request, response);
+            request.getRequestDispatcher("errorupdateClient.jsp").forward(request, response);
         }
     }
 

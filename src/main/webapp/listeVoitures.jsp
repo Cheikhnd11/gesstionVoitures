@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: DELL
+  Date: 06/08/2024
+  Time: 21:13
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -7,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Les Voitures Disponibles - Bool's Agence</title>
+    <title>La liste des Voitures - Bool's Agence</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="aff/assets/favicon.ico" />
     <!-- Bootstrap icons -->
@@ -165,8 +172,10 @@
             <div class="row gx-5 align-items-center justify-content-center">
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
-                        <h1 class="display-4 fw-bold text-white mb-2">Les Voitures Disponibles</h1>
-                        <p class="lead fw-normal text-white-50 mb-4">Découvrez les voitures disponibles dans l'<strong>ENTREPRISE</strong>. Pour donner unn retour au clients !</p>
+                        <h1 class="display-4 fw-bold text-white mb-2">Les Voitures De l'EENTREPRISE</h1>
+                        <p class="lead fw-normal text-white-50 mb-4">Découvrez toutes les voitures de l'ENTREPRISE dans la base !</p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        </div>
                     </div>
                 </div>
                 <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
@@ -180,12 +189,11 @@
     <section class="py-5">
         <div class="container px-5 my-5">
             <div class="text-center section-header">
-                <h2 class="fw-bold">Voitures Disponibles à la Location</h2>
+                <p class="fw-bold"><strong>Liste des Voitures</strong> :</p>
             </div>
 
             <!-- Zone d'affichage des voitures -->
             <div class="car-container">
-                <c:if test="${voitures!=null}">
                 <c:forEach var="voiture" items="${voitures}">
                     <div class="card">
                         <div class="card-body">
@@ -204,11 +212,7 @@
                         </div>
                     </div>
                 </c:forEach>
-                </c:if>
             </div>
-            <c:if test="${voitures==null}">
-                <c:out value="aucune voitures n'est disponible pour le moment !"/>
-            </c:if>
 
             <aside class="call-to-action mt-5">
                 <h2>Votre vie privée, notre priorité.</h2>
@@ -240,3 +244,4 @@
 <script src="js/scripts.js"></script>
 </body>
 </html>
+

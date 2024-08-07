@@ -31,6 +31,7 @@ public class ClientDeLocationServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         String voiture = request.getParameter("idVoiture");
+        String message;
 
         if (voiture == null || voiture.trim().isEmpty()) {
             out.println("<h3>Le numéro de la voiture ne peut pas être vide !</h3>");
@@ -39,19 +40,22 @@ public class ClientDeLocationServlet extends HttpServlet {
 
         Voiture voitureObj = returnVoiture(voiture);
         if (voitureObj == null) {
-            out.println("<h3>Aucune voiture de matricule " + voiture + " n'est trouvée dans la base de données !</h3>");
-            return;
+            message= "Aucune voiture de matricule " + voiture + " n'est trouvée dans la base de données !";
+            request.setAttribute("message", message);
+            request.getRequestDispatcher("confirmationClientLoc.jsp").forward(request, response);
         }
 
         if (voitureObj.getStatus().equals("disponible")) {
-            out.println("<h3>Cette voiture de matricule " + voiture + " n'est pas en location !</h3>");
-            return;
+            message= "Cette voiture de matricule " + voiture + " n'est pas en location !";
+            request.setAttribute("message", message);
+            request.getRequestDispatcher("confirmationClientLoc.jsp").forward(request, response);;
         }
 
         Location location = retournerLocation(voiture);
         if (location == null) {
-            out.println("<h3>Aucune location trouvée pour la voiture de matricule " + voiture + " !</h3>");
-            return;
+            message="Aucune location trouvée pour la voiture de matricule " + voiture +" !";
+            request.setAttribute("message", message);
+            request.getRequestDispatcher("confirmationClientLoc.jsp").forward(request, response);;
         }
 
         int clientId = location.getClient();

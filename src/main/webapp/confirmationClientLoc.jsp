@@ -1,4 +1,12 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
+  Created by IntelliJ IDEA.
+  User: DELL
+  Date: 07/08/2024
+  Time: 03:33
+  To change this template use File | Settings | File Templates.
+--%>
+<<%--
   Created by IntelliJ IDEA.
   User: fayea
   Date: 27/07/2024
@@ -43,8 +51,7 @@
 <div class="container error-container">
     <h2>Une Erreur s'est Produite</h2>
     <p>Désolé, une erreur est survenue lors du traitement de votre demande.</p>
-    <p><strong>Code d'erreur :</strong> <span id="errorCode">404</span></p>
-    <p><strong>La voiture saisie n'est pas dans la base !</strong> </p>
+    <p><strong><c:out value="${message}"/></strong> </p>
 
     <h4>Que faire maintenant ?</h4>
     <ul>

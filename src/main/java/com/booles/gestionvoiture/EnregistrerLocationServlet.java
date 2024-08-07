@@ -9,10 +9,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -32,7 +29,7 @@ public class EnregistrerLocationServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         try {
-            int idLocation = Integer.parseInt(request.getParameter("idLocation"));
+            int idLocation = 0;
             int client = Integer.parseInt(request.getParameter("client"));
             String voiture = request.getParameter("voiture");
             String dateDebut = request.getParameter("dateDebut");
@@ -49,8 +46,7 @@ public class EnregistrerLocationServlet extends HttpServlet {
             Client client1= null;
             client1 = returnClient(client);
             if (client1 == null) {
-                out.println("Le client saisi pour cette location n'est pas inscrit dans la base de donnees!");
-                return;
+                request.getRequestDispatcher("confirmationAjoutLocation.jsp").forward(request, response);
             }
             String nom=client1.getNom();
             String prenom=client1.getPrenom();
@@ -66,6 +62,7 @@ public class EnregistrerLocationServlet extends HttpServlet {
             }
 
             float montantTotal = prixParJour * nombreJour;
+            idLocation=retournerNombreLocation()+1;
                 // Enregistrement de la location
                 ajouterLocation(idLocation, client, voiture, dateDebut, dateFin, nombreJour, montantTotal, statutLocation, kilometrageActuel);
 
@@ -195,6 +192,24 @@ public class EnregistrerLocationServlet extends HttpServlet {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public int retournerNombreLocation() {
+        int nombre = 0;
+        String query = "SELECT COUNT(idLocation) AS nombre FROM Location";
+
+        try (Connection connection = DataBase.getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(query)) {
+
+            if (resultSet.next()) {
+                nombre = resultSet.getInt("nombre");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Erreur lors de la récupération du nombre de client: " + e.getMessage(), e);
+        }
+
+        return nombre;
     }
 
 }

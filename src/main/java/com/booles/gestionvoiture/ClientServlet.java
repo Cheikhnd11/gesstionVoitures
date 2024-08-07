@@ -7,9 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 @WebServlet("/ClientServlet")
 public class ClientServlet extends HttpServlet {
@@ -27,7 +25,7 @@ public class ClientServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int identifient = Integer.parseInt(request.getParameter("identifient"));
+        int identifient = 0;
         String nom = request.getParameter("nom");
         String prenom = request.getParameter("prenom");
         int age = Integer.parseInt(request.getParameter("age"));
@@ -36,17 +34,19 @@ public class ClientServlet extends HttpServlet {
         String telephone = request.getParameter("telephone");
 
         try {
+            identifient = retournerNombreClient() + 1;
             addNewClient(identifient, nom, prenom, age, email, adresse, telephone);
-            request.setAttribute("message", "Client added successfully");
+            request.setAttribute("message", "Client ajouté avec succès.");
+            request.setAttribute("messageType", "success");
         } catch (SQLException e) {
-            // Log the exception and set error message
             e.printStackTrace();
-            request.setAttribute("message", "Error adding client: " + e.getMessage());
+            request.setAttribute("message", "Erreur lors de l'ajout du client: " + e.getMessage());
+            request.setAttribute("messageType", "error");
         }
 
-        // Forward to JSP page with message
-        request.getRequestDispatcher("gestionnaire.jsp").forward(request, response);
+        request.getRequestDispatcher("confirmationAjoutClient.jsp").forward(request, response);
     }
+
 
     private void addNewClient(int identifient, String nom, String prenom, int age, String email, String adresse, String telephone) throws SQLException {
         String query = "INSERT INTO Client (identifient, nom, prenom, age, email, adresse, telephone) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -61,5 +61,22 @@ public class ClientServlet extends HttpServlet {
             ps.setString(7, telephone);
             ps.executeUpdate();
         }
+    }
+    public int retournerNombreClient() {
+        int nombre = 0;
+        String query = "SELECT COUNT(identifient) AS nombre FROM Client";
+
+        try (Connection connection = DataBase.getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(query)) {
+
+            if (resultSet.next()) {
+                nombre = resultSet.getInt("nombre");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Erreur lors de la récupération du nombre de client: " + e.getMessage(), e);
+        }
+
+        return nombre;
     }
 }

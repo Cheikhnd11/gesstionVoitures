@@ -46,6 +46,21 @@
         .card-footer .btn-client {
             width: 100%;
         }
+        .car-container {
+            display: flex;
+            flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante */
+            gap: 1rem;
+        }
+        .card {
+            flex: 1 1 300px; /* Permet aux cartes de s'ajuster */
+            min-width: 300px; /* Fixe une largeur minimale pour les cartes */
+            max-width: 100%; /* Assure que les cartes ne dépassent pas leur conteneur */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition pour l'effet de survol */
+        }
+        .card:hover {
+            transform: translateY(-10px); /* Déplace la carte vers le haut */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre portée pour l'effet de survol */
+        }
     </style>
 </head>
 <body class="d-flex flex-column h-100">
@@ -54,11 +69,13 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-5">
             <a class="navbar-brand" href="index.html">Bool's Agence</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="RecuperUserServlet">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -72,13 +89,11 @@
                     <div class="my-5 text-center text-xl-start">
                         <h1 class="display-5 fw-bolder text-white mb-2">Les Voitures Louées</h1>
                         <p class="lead fw-normal text-white-50 mb-4">Retrouvez toutes les voitures de l'Agence qui ont été louées !</p>
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Started</a>
-                            <a class="btn btn-outline-light btn-lg px-4" href="#!">En Savoir plus</a>
-                        </div>
                     </div>
                 </div>
-                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="img/3.jpg" alt="..." /></div>
+                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                    <img class="img-fluid rounded-3 my-5" src="img/3.jpg" alt="..." />
+                </div>
             </div>
         </div>
     </header>
@@ -94,35 +109,41 @@
                 </div>
             </div>
 
+            <c:choose>
+                <c:when test="${voiture!=null}">
             <!-- Zone d'affichage des voitures -->
-            <c:forEach var="voiture" items="${voitures}">
-                <div class="row gx-5">
-                    <div class="col-lg-4 mb-5">
-                        <div class="card h-100 shadow border-0">
-                            <div class="card-body p-4">
-                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Marque: <c:out value="${voiture.marque}"/></div>
-                                <a class="text-decoration-none link-dark stretched-link">
-                                    <h5 class="card-title mb-3">Modèle: <c:out value="${voiture.modele}"/></h5>
-                                </a>
-                                <p class="card-text mb-0">Immatriculation: <c:out value="${voiture.immatriculation}"/></p>
-                                <p class="card-text mb-0">Nombre de places: <c:out value="${voiture.nombreDePlace}"/></p>
-                                <p class="card-text mb-0">Année de mise en Service: <c:out value="${voiture.anneeDeMiseEnService}"/></p>
-                                <p class="card-text mb-0">Kilométrage: <c:out value="${voiture.kilomeetrage}"/></p>
-                                <p class="card-text mb-0">Catégorie: <c:out value="${voiture.categorie}"/></p>
-                                <p class="card-text mb-0">Type de carburant: <c:out value="${voiture.typeCarburant}"/></p>
-                                <p class="card-text mb-0">Prix par jour: <c:out value="${voiture.prixDeLocationParJour}"/> FCFA</p>
-                                <p class="card-text mb-0">Statut: <c:out value="${voiture.status}"/></p>
-                            </div>
-                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                <form action="ClientDeLocationServlet" method="post">
-                                    <input type="hidden" name="idVoiture" value="${voiture.immatriculation}">
-                                    <button type="submit" class="btn-client"><i class="bi bi-person-fill"></i> Afficher Client</button>
-                                </form>
-                            </div>
+            <c class="car-container">
+                <c:forEach var="voiture" items="${voitures}">
+                    <div class="card h-100 shadow border-0">
+                        <div class="card-body p-4">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Marque: <c:out value="${voiture.marque}"/></div>
+                            <a class="text-decoration-none link-dark stretched-link">
+                                <h5 class="card-title mb-3">Modèle: <c:out value="${voiture.modele}"/></h5>
+                            </a>
+                            <p class="card-text mb-0">Immatriculation: <c:out value="${voiture.immatriculation}"/></p>
+                            <p class="card-text mb-0">Nombre de places: <c:out value="${voiture.nombreDePlace}"/></p>
+                            <p class="card-text mb-0">Année de mise en Service: <c:out value="${voiture.anneeDeMiseEnService}"/></p>
+                            <p class="card-text mb-0">Kilométrage: <c:out value="${voiture.kilomeetrage}"/></p>
+                            <p class="card-text mb-0">Catégorie: <c:out value="${voiture.categorie}"/></p>
+                            <p class="card-text mb-0">Type de carburant: <c:out value="${voiture.typeCarburant}"/></p>
+                            <p class="card-text mb-0">Prix par jour: <c:out value="${voiture.prixDeLocationParJour}"/> FCFA</p>
+                            <p class="card-text mb-0">Statut: <c:out value="${voiture.status}"/></p>
+                        </div>
+                        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                            <form action="ClientDeLocationServlet" method="post">
+                                <input type="hidden" name="idVoiture" value="${voiture.immatriculation}">
+                                <button type="submit" class="btn-client"><i class="bi bi-person-fill"></i> Afficher Client</button>
+                            </form>
                         </div>
                     </div>
-                </div>
-            </c:forEach>
+                </c:forEach>
+                    </c:when>
+                <c:otherwise>
+                    pas de voiture en location pour le moment!
+                </c:otherwise>
+                    </c:choose>
+            </div>
+
 
             <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
                 <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">

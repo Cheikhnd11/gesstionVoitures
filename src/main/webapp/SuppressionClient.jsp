@@ -95,7 +95,7 @@
         <form action="SupprimerClientServlet" method="post">
             <div class="field">
                 <label for="clientId">ID du Client :</label>
-                <input type="text" id="clientId" name="clientId" required>
+                <input type="number" id="clientId" name="clientId" required>
             </div>
             <div class="field">
                 <input type="submit" value="Supprimer">

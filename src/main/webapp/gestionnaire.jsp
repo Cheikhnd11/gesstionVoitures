@@ -111,7 +111,7 @@
             <div class="w3-container w3-orange w3-text-white w3-padding-16">
                 <div class="w3-left"><i class="fa fa-list-alt w3-xxxlarge"></i></div>
                 <div class="w3-clear"></div>
-      <a href="etatPARKING.jsp"><h4>État du parking</h4></a>
+      <a href="NombreDeVoitureServlet"><h4>État du parking</h4></a>
             </div>
         </div>
     </div>

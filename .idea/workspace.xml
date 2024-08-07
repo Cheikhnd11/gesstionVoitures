@@ -10,24 +10,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e54fef80-50e0-4329-8a3d-8c43f4ad4ab9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ClientDeLocationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/conf.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ListeVoituresServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/NombreDeVoitureServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RecuperUserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/NombreVoitures.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/confirmationAjoutClient.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/confirmationAjoutLocation.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/confirmationClientLoc.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/confirmationRetourVoiture.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/confirmationSupClient.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/errorupdateClient.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/listeVoitures.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/support.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ClientDeLocationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ClientDeLocationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ClientSearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ClientSearchServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/ClientServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/EnregistrerLocationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/EnregistrerLocationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercheVoitureByMatricule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercheVoitureByMatricule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercheVoitureLOUER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercheVoitureLOUER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercherVoitureServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RechercherVoitureServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/SuppressionVoiture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/SuppressionVoiture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/VoitureDisponibleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/VoitureDisponibleServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/VoitureNonDisponibleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/VoitureNonDisponibleServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/VoitureServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/VoitureServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AjoutVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RetourVoitureServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/RetourVoitureServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/SupprimerClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booles/gestionvoiture/SupprimerClientServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AjoutClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AjoutClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/RechercherLOUER.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/RechercherLOUER.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Retour.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Retour.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/SuppressionClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/SuppressionClient.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/VoitureDIsponiblePARKING.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VoitureDIsponiblePARKING.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/VoitureNonDisponiblePARKING.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VoitureNonDisponiblePARKING.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficheResulatVoitureLouer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficheResulatVoitureLouer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/afficheResultatVoiture.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/afficheResultatVoiture.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/conf.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/conf.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/etatPARKING.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/etatPARKING.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gestionnaire.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/rechercheClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/rechercheClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/saisirInfoLocation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/saisirInfoLocation.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +303,8 @@
       <workItem from="1722695039208" duration="983000" />
       <workItem from="1722717198692" duration="336000" />
       <workItem from="1722777031402" duration="17187000" />
-      <workItem from="1722882048671" duration="34437000" />
+      <workItem from="1722882048671" duration="35281000" />
+      <workItem from="1722953701405" duration="30300000" />
     </task>
     <task id="LOCAL-00001" summary="initialisation">
       <option name="closed" value="true" />

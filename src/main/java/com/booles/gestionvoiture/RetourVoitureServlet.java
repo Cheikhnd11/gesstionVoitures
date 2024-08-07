@@ -8,10 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 @WebServlet("/RetourVoitureServlet")
 public class RetourVoitureServlet extends HttpServlet {
@@ -28,11 +25,7 @@ public class RetourVoitureServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-
         try {
-            int idRetour = Integer.parseInt(request.getParameter("id"));
             int idLocation = Integer.parseInt(request.getParameter("idLocation"));
             int kmRetour = Integer.parseInt(request.getParameter("km"));
             String dateRetour = request.getParameter("date");
@@ -40,30 +33,36 @@ public class RetourVoitureServlet extends HttpServlet {
             Location location = returnLocation(idLocation);
 
             if (location == null) {
-                out.println("<h1>Aucune location trouvée avec l'identifiant numéro " + idLocation + "</h1>");
-                return;
+                request.setAttribute("message", "Aucune location trouvée avec l'identifiant numéro " + idLocation);
+                request.setAttribute("messageType", "error");
+            } else if (location.getStatutLocation().equals("terminee")) {
+                request.setAttribute("message", "Cette location (ID: " + idLocation + ") est terminée depuis le " + location.getDateFin());
+                request.setAttribute("messageType", "error");
+            } else {
+                int idRetour = retournerNombreRetourVoiture() + 1;
+                ajouterRetourVoiture(idRetour, idLocation, kmRetour, dateRetour);
+                String matricule = location.getVoiture();
+                updateStatutVoiture(matricule);
+                updateKilometrageVoiture(matricule, kmRetour);
+                updateStatutLocation(idLocation);
+
+                request.setAttribute("message", "Retour de voiture enregistré avec succès.");
+                request.setAttribute("messageType", "success");
             }
-
-            if (location.getStatutLocation().equals("terminee")) {
-                out.println("<h1>Cette location (ID: " + idLocation + ") est terminée depuis le " + location.getDateFin() + "</h1>");
-                return;
-            }
-
-            ajouterRetourVoiture(idRetour, idLocation, kmRetour, dateRetour);
-            String matricule = location.getVoiture();
-            updateStatutVoiture(matricule);
-            updateKilometrageVoiture(matricule, kmRetour);
-            updateStatutLocation(idLocation);
-
-            out.println("<h1>Retour de voiture enregistré avec succès</h1>");
         } catch (NumberFormatException e) {
-            out.println("<h1>Erreur de format de nombre: " + e.getMessage() + "</h1>");
+            request.setAttribute("message", "Erreur de format de nombre: " + e.getMessage());
+            request.setAttribute("messageType", "error");
         } catch (SQLException e) {
-            out.println("<h1>Erreur lors de la manipulation de la base de données: " + e.getMessage() + "</h1>");
+            request.setAttribute("message", "Erreur lors de la manipulation de la base de données: " + e.getMessage());
+            request.setAttribute("messageType", "error");
         } catch (Exception e) {
-            out.println("<h1>Une erreur inattendue est survenue: " + e.getMessage() + "</h1>");
+            request.setAttribute("message", "Une erreur inattendue est survenue: " + e.getMessage());
+            request.setAttribute("messageType", "error");
         }
+
+        request.getRequestDispatcher("confirmationRetourVoiture.jsp").forward(request, response);
     }
+
 
     public void ajouterRetourVoiture(int id, int location, int kmRetour, String dateRetour) throws SQLException {
         String query = "INSERT INTO RetourVoiture(id, location, kilometrageDeRetour, dateRetour) VALUES (?, ?, ?, ?)";
@@ -122,5 +121,23 @@ public class RetourVoitureServlet extends HttpServlet {
             }
         }
         return location;
+    }
+
+    public int retournerNombreRetourVoiture() {
+        int nombre = 0;
+        String query = "SELECT COUNT(id) AS nombre FROM Retourvoiture";
+
+        try (Connection connection = DataBase.getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(query)) {
+
+            if (resultSet.next()) {
+                nombre = resultSet.getInt("nombre");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Erreur lors de la récupération du nombre de client: " + e.getMessage(), e);
+        }
+
+        return nombre;
     }
 }

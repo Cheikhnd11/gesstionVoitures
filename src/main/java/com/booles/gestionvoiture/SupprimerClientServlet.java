@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @WebServlet("/SupprimerClientServlet")
@@ -22,29 +23,25 @@ public class SupprimerClientServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String clientIdParam = request.getParameter("clientId");
+        int clientIdParam = Integer.parseInt(request.getParameter("clientId"));
+        Client client = null;
+        client=returnClient(clientIdParam);
 
-        if (clientIdParam != null && !clientIdParam.isEmpty()) {
+        if (client == null) {
+            request.setAttribute("messageType", "error");
+            request.setAttribute("message","Ops! Ce client n'existe pas dans la base!");
+        }else {
             try {
-                int clientId = Integer.parseInt(clientIdParam);
-                boolean success = deleteClient(clientId);
-
-                if (success) {
-                    // Rediriger vers confirmation.jsp
-                    request.setAttribute("message", "Client supprimé avec succès");
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("/Confirmation.jsp");
-                    dispatcher.forward(request, response);
-                } else {
-                    response.sendError(HttpServletResponse.SC_NOT_FOUND, "Client non trouvé");
-                }
-            } catch (NumberFormatException e) {
-                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Format d'identifiant invalide");
+                deleteClient(clientIdParam);
+                request.setAttribute("messageType", "success");
+                request.setAttribute("message", "Client supprimée avec succès !");
             } catch (SQLException e) {
-                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Erreur de base de données: " + e.getMessage());
+                request.setAttribute("messageType", "error");
+                request.setAttribute("message", "Erreur lors de la suppression du client : " + e.getMessage());
             }
-        } else {
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Identifiant du client requis");
         }
+        request.getRequestDispatcher("confirmationSupClient.jsp").forward(request, response);
+
     }
 
     private boolean deleteClient(int identifiant) throws SQLException {
@@ -55,5 +52,22 @@ public class SupprimerClientServlet extends HttpServlet {
             int rowsAffected = ps.executeUpdate();
             return rowsAffected > 0;
         }
+    }
+    public Client returnClient(int idClient) {
+        Client client = null;
+        String query = "SELECT * FROM Client WHERE identifient = ?";
+        try (Connection connection = DataBase.getConnection();
+             PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setInt(1, idClient);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    client = new Client();
+                    client.setIdentifiant(rs.getInt("identifient"));
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Erreur lors de la récupération du client", e);
+        }
+        return client;
     }
 }

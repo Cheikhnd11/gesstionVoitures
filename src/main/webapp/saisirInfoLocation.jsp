@@ -114,10 +114,6 @@
         <h1 class="main-title">Enregistrement de Location</h1>
         <form action="EnregistrerLocationServlet" method="post">
             <div class="field">
-                <label for="idLocation">ID Location :</label>
-                <input type="number" id="idLocation" name="idLocation">
-            </div>
-            <div class="field">
                 <label for="client">ID Client :</label>
                 <input type="number" id="client" name="client">
             </div>

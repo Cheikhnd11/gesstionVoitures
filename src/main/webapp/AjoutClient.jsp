@@ -22,8 +22,8 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="RecuperUserServlet">Accuei</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -41,12 +41,6 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6">
                         <form action="ClientServlet" method="post">
-                            <!-- Identifient input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" type="text" name="identifient" data-sb-validations="required" />
-                                <label>Identifiant *</label>
-                                <div class="invalid-feedback" data-sb-feedback="identifient:required">L'identifiant est obligatoire</div>
-                            </div>
                             <!-- Nom input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" type="text" name="nom" data-sb-validations="required" />

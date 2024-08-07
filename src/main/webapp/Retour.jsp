@@ -112,10 +112,6 @@
         <h1 class="main-title">Bienvenue dans la zone de Retour de Voiture</h1>
 
         <form action="RetourVoitureServlet" method="post" >
-            <div class="field">
-                <label>ID du Retour :</label>
-                <input type="number" name="id" required>
-            </div>
 
             <div class="field">
                 <label>ID Location :</label>
