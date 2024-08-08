@@ -180,7 +180,12 @@
         <a href="javascript:history.back()" class="button-back">Page Précédente</a>
     </div>
     <div class="results-section">
-        <p class="main-title">🔍 Résultat de la recherche des Véhicules ! 🔍</p>
+        <p class="main-title">🔍 Découvrez les Véhicules les Plus Recherchés ! 🔍</p>
+
+        <div class="info-box">
+            <h2>🚗 Liste Triée par Ordre Décroissant 🚗</h2>
+            <p>Explorez notre <span class="highlight-text">liste triée par ordre décroissant</span> des véhicules qui suscitent le plus d’intérêt auprès de notre clientèle. Cette liste vous révèle les modèles les plus convoités, vous offrant une vue claire des préférences actuelles de vos clients.</p>
+        </div>
 
         <c:if test="${!empty voitures}">
             <table class="results-table">
@@ -195,6 +200,7 @@
                     <th>Type de Carburant</th>
                     <th>Catégorie</th>
                     <th>Prix de location par jour</th>
+                    <th>Nombre de location</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -208,7 +214,8 @@
                         <td><c:out value="${voiture.kilomeetrage}"/> km</td>
                         <td><c:out value="${voiture.typeCarburant}"/></td>
                         <td><c:out value="${voiture.categorie}"/></td>
-                        <td><c:out value="${voiture.prixDeLocationParJour}"/>fcfa</td>
+                        <td><c:out value="${voiture.prixDeLocationParJour}"/> €</td>
+                        <td><c:out value="${voiture.nombreRecherche}"/> fois</td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -216,7 +223,7 @@
         </c:if>
 
         <c:if test="${empty voitures}">
-            <p>Aucune voitures trouvee pour ces caracteristiques !</p>
+            <p>Pas de voitures recherchees pour le moment .</p>
         </c:if>
     </div>
 </div>

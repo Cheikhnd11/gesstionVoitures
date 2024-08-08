@@ -65,6 +65,7 @@ public class EnregistrerLocationServlet extends HttpServlet {
             idLocation=retournerNombreLocation()+1;
                 // Enregistrement de la location
                 ajouterLocation(idLocation, client, voiture, dateDebut, dateFin, nombreJour, montantTotal, statutLocation, kilometrageActuel);
+                incrementerNombreRecherche(voiture);
 
                 ajouterFacture(idLocation,nom,prenom,telephone,voiture,kilometrageActuel,marque,nombreJour,montantTotal,dateDebut);
 
@@ -211,5 +212,15 @@ public class EnregistrerLocationServlet extends HttpServlet {
 
         return nombre;
     }
+
+    public void incrementerNombreRecherche(String immatriculation) throws SQLException {
+        String query = "UPDATE Voiture SET nombreRecherche = nombreRecherche + 1 WHERE Immatriculation = ?";
+        try (Connection connection = DataBase.getConnection();
+             PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setString(1, immatriculation);
+            ps.executeUpdate();
+        }
+    }
+
 
 }

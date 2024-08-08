@@ -110,7 +110,7 @@
             </div>
 
             <c:choose>
-                <c:when test="${voiture!=null}">
+                <c:when test="${voitures!=null}">
             <!-- Zone d'affichage des voitures -->
             <c class="car-container">
                 <c:forEach var="voiture" items="${voitures}">
@@ -164,9 +164,9 @@
                 <div class="small m-0 text-white">Copyright &copy; Bool's Agence 2024</div>
             </div>
             <div class="col-auto">
-                <a class="link-light small" href="#!">Privacy</a>
+                <a class="link-light small" href="politique.jsp">Privacy</a>
                 <span class="text-white mx-1">&middot;</span>
-                <a class="link-light small" href="#!">Terms</a>
+                <a class="link-light small" href="politique.jsp">Terms</a>
                 <span class="text-white mx-1">&middot;</span>
                 <a class="link-light small" href="#!">Contact</a>
             </div>

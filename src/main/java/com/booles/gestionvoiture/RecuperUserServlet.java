@@ -22,7 +22,12 @@ public class RecuperUserServlet extends HttpServlet {
         HttpSession session = request.getSession();
         Utilisateur user = (Utilisateur) session.getAttribute("user");
         request.setAttribute("user", user);
-        request.getRequestDispatcher("gestionnaire.jsp").forward(request, response);
+        if (user.getRole().equals("gestionnaire")) {
+            request.getRequestDispatcher("gestionnaire.jsp").forward(request, response);
+        }else {
+            request.getRequestDispatcher("chef.jsp").forward(request, response);
+        }
+
     }
 
 

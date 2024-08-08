@@ -56,8 +56,7 @@
         </div>
         <div class="w3-col s8 w3-bar">
             <span>Bienvenue, <strong><%= prenom %> <%= nom %></strong></span><br>
-            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
-            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+
         </div>
     </div>
     <hr>
@@ -71,6 +70,7 @@
         <a href="afficherClient.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher un client</a>
         <a href="AfficherVoiture.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Rechercher une voiture</a>
         <a href="rechercheClient.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i> Afficher Client louant une voiture</a>
+        <a href="index.jsp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-dashboard fa-fw"></i>Deconnexion</a>
     </div>
 </nav>
 

@@ -16,7 +16,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url("img/Fond (69).png");
+            background-image: url("img/supp.jpg");
         }
         .container {
             display: flex;

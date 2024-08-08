@@ -24,13 +24,7 @@
             Menu
             <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-            </ul>
-        </div>
+
     </div>
 </nav>
 <!-- Masthead-->
@@ -38,8 +32,9 @@
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">Bools Automobile</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">Bienvenue sur Bool's </h2>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">Bienvenue sur  </h2>
+                <h1 class="mx-auto my-0 text-uppercase">Bools Agence</h1><br><br>
+
                 <a class="btn btn-primary" href="login.jsp">Connexion</a>
             </div>
         </div>
@@ -55,8 +50,7 @@
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
                     <h4>Que dois-je faire </h4>
-                    <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
-                </div>
+                    <p class="text-black-50 mb-0">Pour povoir connecter a se cette agence veuillez d'abord recuperer vous informations de connection aupres du service technique .Une fois cela fais veuillez cliquer sur le boutton connection et apres s'identifier avec les information de connexion qui vous a ete fournit.</p>                </div>
             </div>
         </div>
         <!-- Contact-->

@@ -3,6 +3,7 @@ package com.booles.gestionvoiture;
 public class Voiture {
 
     private String Immatriculation;
+    private int nombreRecherche;
     private int nombreDePlace;
     private String marque;
     private String modele;
@@ -24,8 +25,9 @@ public class Voiture {
         this.status = status;
     }
 
-    public Voiture(String Immatriculation, int nombreDePlace, String marque, String modele, String anneeDeMiseEnService, int kilomeetrage, String typeCarburant, String categorie, float prixDeLocationParJour, String status) {
+    public Voiture(String Immatriculation,int nombreRecherche, int nombreDePlace, String marque, String modele, String anneeDeMiseEnService, int kilomeetrage, String typeCarburant, String categorie, float prixDeLocationParJour, String status) {
         this.Immatriculation = Immatriculation;
+        this.nombreRecherche = nombreRecherche;
         this.nombreDePlace = nombreDePlace;
         this.marque = marque;
         this.modele = modele;
@@ -37,6 +39,13 @@ public class Voiture {
         this.status = status;
     }
 
+    public int getNombreRecherche() {
+        return nombreRecherche;
+    }
+
+    public void setNombreRecherche(int nombreRecherche) {
+        this.nombreRecherche = nombreRecherche;
+    }
 
     public String getImmatriculation() {
         return Immatriculation;

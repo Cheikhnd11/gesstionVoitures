@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: fayea
@@ -170,9 +169,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="RecuperUserServlet">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:history.back()">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">À Propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -210,7 +209,7 @@
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/600x350/adb5bd/495057" alt="Nombre de Voitures" />
+                    <img class="card-img-top" src="img/deux.jpg" alt="Nombre de Voitures" />
                     <div class="card-body">
                         <div class="badge bg-primary text-white rounded-pill mb-2">NOMBRE DE VOITURES</div>
                         <a class="text-decoration-none link-dark stretched-link" href="ListeVoituresServlet">
@@ -248,9 +247,9 @@
                 <div class="small">Copyright &copy; Bool's Agence 2024</div>
             </div>
             <div class="col-auto">
-                <a class="text-light small" href="#!">Privacy</a>
+                <a class="text-light small" href="politique.jsp">Privacy</a>
                 <span class="text-white mx-1">&middot;</span>
-                <a class="text-light small" href="#!">Terms</a>
+                <a class="text-light small" href="politique.jsp">Terms</a>
                 <span class="text-white mx-1">&middot;</span>
                 <a class="text-light small" href="#!">Contact</a>
             </div>

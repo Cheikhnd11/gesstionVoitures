@@ -225,9 +225,9 @@
                 <div class="small m-0 text-white">Copyright &copy; Bool's Agence 2024</div>
             </div>
             <div class="col-auto">
-                <a class="link-light small" href="#!">Confidentialité</a>
+                <a class="link-light small" href="politique.jsp">Confidentialité</a>
                 <span class="text-white mx-1">&middot;</span>
-                <a class="link-light small" href="#!">Conditions</a>
+                <a class="link-light small" href="politique.jsp">Conditions</a>
                 <span class="text-white mx-1">&middot;</span>
                 <a class="link-light small" href="#!">Contact</a>
             </div>

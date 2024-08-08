@@ -39,19 +39,8 @@
     }
 %>
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    <a class="navbar-brand ps-3" href="index.html">Bool's Agence</a>
+    <a class="navbar-brand ps-3" href="#">Bool's Agence</a>
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#!">Paramètres</a></li>
-                <li><a class="dropdown-item" href="#!">Journal d'activité</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#!">Déconnexion</a></li>
-            </ul>
-        </li>
-    </ul>
 </nav>
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
@@ -59,23 +48,18 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Principal</div>
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="#">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Tableau de Bord
                     </a>
                     <div class="sb-sidenav-menu-heading">Informations</div>
-                    <a class="nav-link" href="#">
-                        <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                        Liste des Clients
-                    </a>
-                    <a class="nav-link" href="#">
-                        <div class="sb-nav-link-icon"><i class="fas fa-car"></i></div>
-                        Voitures Disponibles
-                    </a>
-                    <a class="nav-link" href="#">
+
+                    <a class="nav-link" href="index.jsp">
                         <div class="sb-nav-link-icon"><i class="fas fa-parking"></i></div>
-                        État du Parking
+                        DÉCONNEXION
                     </a>
+
+
                 </div>
             </div>
             <div class="sb-sidenav-footer">
@@ -94,9 +78,9 @@
                 <div class="row">
                     <div class="col-xl-4 col-md-6">
                         <div class="card bg-primary text-white mb-4">
-                            <div class="card-body">Liste des Clients</div>
+                            <div class="card-body">les voitures les plus recherchées</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">Voir les Détails</a>
+                                <a class="small text-white stretched-link" href="VoituresPlusRechercherServlet">Voir les Détails</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
@@ -105,16 +89,16 @@
                         <div class="card bg-success text-white mb-4">
                             <div class="card-body">État du Parking</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">Voir les Détails</a>
+                                <a class="small text-white stretched-link" href="NombreDeVoitureServlet">Voir les Détails</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6">
                         <div class="card bg-danger text-white mb-4">
-                            <div class="card-body">Liste des Voitures Disponibles</div>
+                            <div class="card-body">bilan financier mensuel</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">Voir les Détails</a>
+                                <a class="small text-white stretched-link" href="RevenuVoituresServlet">Voir les Détails</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
@@ -147,9 +131,9 @@
                 <div class="d-flex align-items-center justify-content-between small">
                     <div class="text-muted">&copy; Bool's Agence 2024</div>
                     <div>
-                        <a href="#">Sous Contrat de Licence de l'UASZ</a>
+                        <a href="politique.jsp">Sous Contrat de Licence de l'UASZ</a>
                         &middot;
-                        <a href="#">Termes &amp; Conditions</a>
+                        <a href="politique.jsp">Termes &amp; Conditions</a>
                     </div>
                 </div>
             </div>
