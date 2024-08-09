@@ -54,9 +54,19 @@
                     </a>
                     <div class="sb-sidenav-menu-heading">Informations</div>
 
+                    <a class="nav-link" href="creatGestionnaire.jsp">
+                        <div class="sb-nav-link-icon"><i class="fas fa-parking"></i></div>
+                        AJOUTER UN GESTIONNAIRE!
+                    </a>
+
+                    <a class="nav-link" href="ListeGestionnaireServlet">
+                        <div class="sb-nav-link-icon"><i class="fas fa-parking"></i></div>
+                        LISTE GESTIONNAIRES!
+                    </a>
+
                     <a class="nav-link" href="index.jsp">
                         <div class="sb-nav-link-icon"><i class="fas fa-parking"></i></div>
-                        DÉCONNEXION
+                        DÉCONNEXION!
                     </a>
 
 

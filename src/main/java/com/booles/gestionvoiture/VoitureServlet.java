@@ -7,10 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 @WebServlet("/VoitureServlet")
 public class VoitureServlet extends HttpServlet {
@@ -27,11 +24,8 @@ public class VoitureServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       response.setContentType("text/html");
-       PrintWriter out = response.getWriter();
-
         String immatriculation = request.getParameter("Immatriculation");
-        int Nb_place= Integer.parseInt(request.getParameter("Nb_place"));
+        String nbPlaceStr = request.getParameter("Nb_place");
         String marque = request.getParameter("marque");
         String modele = request.getParameter("modele");
         String anneeDeMiseEnService = request.getParameter("anneeDeMiseEnService");
@@ -41,47 +35,82 @@ public class VoitureServlet extends HttpServlet {
         String prixDeLocationParJourStr = request.getParameter("prixDeLocationParJour");
         String status = request.getParameter("status");
 
+        String message = "";
+        String messageType = "success"; // Default message type
+        String redirectPage = "confirmationAjoutVoiture.jsp"; // Page de confirmation
 
         try {
             if (immatriculation == null || marque == null || modele == null ||
-                     kilometrageStr == null || typeCarburant == null || categorie == null || prixDeLocationParJourStr == null) {
-                throw new IllegalArgumentException("All parameters are required.");
+                    nbPlaceStr == null || kilometrageStr == null || typeCarburant == null ||
+                    categorie == null || prixDeLocationParJourStr == null) {
+                throw new IllegalArgumentException("Tous les paramètres sont requis.");
             }
 
-            int kilomeetrage = Integer.parseInt(kilometrageStr);
+            int nbPlace = Integer.parseInt(nbPlaceStr);
+            int kilometrage = Integer.parseInt(kilometrageStr);
             double prixDeLocationParJour = Double.parseDouble(prixDeLocationParJourStr);
 
-            addNewVoiture(immatriculation,Nb_place, marque, modele, anneeDeMiseEnService, kilomeetrage, typeCarburant, categorie, prixDeLocationParJour,status);
-            request.setAttribute("message", "Car added successfully");
+            Voiture voiture = returnVoiture(immatriculation);
+            if (voiture != null) {
+                message = "La voiture de matricule: " + immatriculation + " existe déjà dans l'entreprise!";
+                messageType = "error"; // Set message type to error
+            } else {
+                addNewVoiture(immatriculation, nbPlace, marque, modele, anneeDeMiseEnService, kilometrage, typeCarburant, categorie, prixDeLocationParJour, status);
+                message = "La voiture a été ajoutée avec succès.";
+            }
         } catch (NumberFormatException e) {
             e.printStackTrace();
-            request.setAttribute("message", "Invalid number format: " + e.getMessage());
+            message = "Format de nombre invalide : " + e.getMessage();
+            messageType = "error"; // Set message type to error
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
-            request.setAttribute("message", "Missing or invalid parameters: " + e.getMessage());
+            message = "Paramètres manquants ou invalides : " + e.getMessage();
+            messageType = "error"; // Set message type to error
         } catch (SQLException e) {
             e.printStackTrace();
-            request.setAttribute("message", "Error adding car: " + e.getMessage());
+            message = "Erreur lors de l'ajout de la voiture : " + e.getMessage();
+            messageType = "error"; // Set message type to error
         }
 
-        request.getRequestDispatcher("gestionnaire.jsp").forward(request, response);
+        request.setAttribute("message", message);
+        request.setAttribute("messageType", messageType);
+        request.getRequestDispatcher(redirectPage).forward(request, response);
     }
 
-    private void addNewVoiture(String Immatriculation,int nb_place, String marque, String modele, String anneeDeMiseEnService, int kilomeetrage, String typeCarburant, String categorie, double prixDeLocationParJour,String status) throws SQLException {
-        String query = "INSERT INTO Voiture (Immatriculation,nombreDePlace, marque, modele, anneeDeMiseEnService, kilomeetrage, typeCarburant, categorie, prixDeLocationParJour,status) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?)";
+    private void addNewVoiture(String immatriculation, int nbPlace, String marque, String modele, String anneeDeMiseEnService, int kilometrage, String typeCarburant, String categorie, double prixDeLocationParJour, String status) throws SQLException {
+        String query = "INSERT INTO Voiture (Immatriculation, nombreDePlace, marque, modele, anneeDeMiseEnService, kilomeetrage, typeCarburant, categorie, prixDeLocationParJour, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (Connection connection = DataBase.getConnection();
              PreparedStatement ps = connection.prepareStatement(query)) {
-            ps.setString(1, Immatriculation);
-            ps.setInt(2,nb_place);
+            ps.setString(1, immatriculation);
+            ps.setInt(2, nbPlace);
             ps.setString(3, marque);
             ps.setString(4, modele);
             ps.setString(5, anneeDeMiseEnService);
-            ps.setInt(6, kilomeetrage);
+            ps.setInt(6, kilometrage);
             ps.setString(7, typeCarburant);
             ps.setString(8, categorie);
             ps.setDouble(9, prixDeLocationParJour);
             ps.setString(10, status);
             ps.executeUpdate();
         }
+    }
+
+    private Voiture returnVoiture(String idVoiture) {
+        Voiture voiture = null;
+        String query = "SELECT * FROM Voiture WHERE Immatriculation = ?";
+        try (Connection connection = DataBase.getConnection();
+             PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setString(1, idVoiture);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    voiture = new Voiture();
+                    voiture.setMarque(rs.getString("marque"));
+                    // You can set other fields if needed
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return voiture;
     }
 }

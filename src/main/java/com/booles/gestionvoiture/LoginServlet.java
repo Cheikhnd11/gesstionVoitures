@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
                     request.getRequestDispatcher("gestionnaire.jsp").forward(request, response);
                 }
             }else {
-                request.getRequestDispatcher("login.jsp").forward(request, response);
+                request.getRequestDispatcher("authFailur.jsp").forward(request, response);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
