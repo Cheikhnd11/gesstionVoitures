@@ -36,7 +36,7 @@ public class RechercherVoitureServlet extends HttpServlet {
 
         List<Voiture> voitures = RechercherVoiture(marque, kilometrage, annee, carburant, categorie);
         request.setAttribute("voitures", voitures);
-        request.getRequestDispatcher("afficheResultatVoiture.jsp").forward(request, response);
+        request.getRequestDispatcher("afficheVoitures.jsp").forward(request, response);
     }
 
     public List<Voiture> RechercherVoiture(String marque, int kilometrage, String annee, String carburant, String categorie) {
@@ -64,6 +64,7 @@ public class RechercherVoitureServlet extends HttpServlet {
                     voiture.setTypeCarburant(resultSet.getString("typeCarburant"));
                     voiture.setCategorie(resultSet.getString("categorie"));
                     voiture.setPrixDeLocationParJour(resultSet.getInt("prixDeLocationParJour"));
+                    voiture.setStatus(resultSet.getString("status"));
                     voitures.add(voiture);
                 }
             }

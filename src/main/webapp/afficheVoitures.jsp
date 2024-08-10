@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: DELL
+  Date: 10/08/2024
+  Time: 04:16
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -165,8 +172,8 @@
             <div class="row gx-5 align-items-center justify-content-center">
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
-                        <h1 class="display-4 fw-bold text-white mb-2">Infos Client</h1>
-                        <p class="lead fw-normal text-white-50 mb-4">Glissez pour decouvrir les infos du <strong>CLIENT</strong>. recherche !</p>
+                        <h1 class="display-4 fw-bold text-white mb-2">Resutat de la recherche de Voitures!</h1>
+                        <p class="lead fw-normal text-white-50 mb-4">Glissez pour Découvrir les voitures dans l'<strong>ENTREPRISE</strong> portant les caracteristiques donnees !</p>
                     </div>
                 </div>
                 <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
@@ -180,31 +187,36 @@
     <section class="py-5">
         <div class="container px-5 my-5">
             <div class="text-center section-header">
-                <h2 class="fw-bold">Informations du client :</h2>
+                <h2 class="fw-bold">Informations des Voitures !</h2>
             </div>
 
-
+            <!-- Zone d'affichage des voitures -->
             <div class="car-container">
-                <c:if test="${client!=null}">
-
+                <c:if test="${voitures!=null}">
+                    <c:forEach var="voiture" items="${voitures}">
                         <div class="card">
                             <div class="card-body">
-                                <div class="badge badge-custom rounded-pill mb-2">Identifiant: <c:out value="${client.identifient}"/></div>
+                                <div class="badge badge-custom rounded-pill mb-2">Marque: <c:out value="${voiture.marque}"/></div>
                                 <a class="text-decoration-none link-dark stretched-link">
-                                    <h5 class="card-title mb-3">Nom: <c:out value="${client.nom}"/></h5>
+                                    <h5 class="card-title mb-3">Modèle: <c:out value="${voiture.modele}"/></h5>
                                 </a>
-                                <p class="card-text mb-0">Prénom: <c:out value="${client.prenom}"/></p>
-                                <p class="card-text mb-0">Age: <c:out value="${client.age}"/></p>
-                                <p class="card-text mb-0">Email: <c:out value="${client.email}"/></p>
-                                <p class="card-text mb-0">Adresse: <c:out value="${client.adresse}"/></p>
-                                <p class="card-text mb-0">Téléphone: <c:out value="${client.telephone}"/></p>
+                                <p class="card-text mb-0">Immatriculation: <c:out value="${voiture.immatriculation}"/></p>
+                                <p class="card-text mb-0">Places: <c:out value="${voiture.nombreDePlace}"/></p>
+                                <p class="card-text mb-0">Année: <c:out value="${voiture.anneeDeMiseEnService}"/></p>
+                                <p class="card-text mb-0">Kilométrage: <c:out value="${voiture.kilomeetrage}"/> km</p>
+                                <p class="card-text mb-0">Catégorie: <c:out value="${voiture.categorie}"/></p>
+                                <p class="card-text mb-0">Carburant: <c:out value="${voiture.typeCarburant}"/></p>
+                                <p class="card-text mb-0">Prix/jour: <c:out value="${voiture.prixDeLocationParJour}"/> FCFA</p>
+                                <p class="card-text mb-0">Statut: <c:out value="${voiture.status}"/></p>
                             </div>
                         </div>
+                    </c:forEach>
                 </c:if>
             </div>
-<c:if test="${client==null}">
-    <c:out value="Aucun client trouve !"/>
-</c:if>
+            <c:if test="${voitures==null}">
+                <c:out value="aucune voitures n'est disponible pour le moment !"/>
+            </c:if>
+
             <aside class="call-to-action mt-5">
                 <h2>Votre vie privée, notre priorité.</h2>
                 <p>Nous nous engageons à offrir une expérience client exceptionnelle en mettant la satisfaction de nos clients au cœur de notre démarche.</p>

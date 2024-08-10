@@ -181,8 +181,8 @@
 <header>
     <div class="container">
         <h1>ETAT DU PARKING</h1>
-        <p>Découvrez toutes les voitures disponibles et en location dans le parking en un seul clic !</p>
-        <a class="btn btn-custom" href="ListeVoitures.jsp">Voir les Voitures</a>
+        <p>Découvrez toutes les voitures disponibles ou en location dans le parking en un seul clic !</p>
+        <a class="btn btn-custom" href="ListeVoituresServlet">Voir les Voitures</a>
         <a class="btn btn-outline-light ms-3" href="#!">En Savoir Plus</a>
     </div>
 </header>

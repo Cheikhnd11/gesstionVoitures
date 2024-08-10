@@ -25,15 +25,15 @@ public class RechercherVoitureByImtServlet extends HttpServlet {
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String voiture = request.getParameter("voiture");
-        List<Voiture> voitures = new ArrayList<>();
-       voitures=RechercherVoiture(voiture);
-        request.setAttribute("voitures", voitures);
+        String voiture1 = request.getParameter("voiture");
+        Voiture voiture = null;
+       voiture=RechercherVoiture(voiture1);
+        request.setAttribute("voiture", voiture);
         request.getRequestDispatcher("afficheResultatVoiture.jsp").forward(request, response);
     }
 
-    public List<Voiture> RechercherVoiture(String immatricalation) {
-        List<Voiture> voitures = new ArrayList<>();
+    public Voiture RechercherVoiture(String immatricalation) {
+        Voiture voiture = null;
         String sql = "SELECT * FROM Voiture WHERE Immatriculation = ?";
 
         try (Connection connection = DataBase.getConnection();
@@ -42,8 +42,8 @@ public class RechercherVoitureByImtServlet extends HttpServlet {
             preparedStatement.setString(1, immatricalation);
 
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                while (resultSet.next()) {
-                    Voiture voiture = new Voiture();
+                if (resultSet.next()) {
+                    voiture = new Voiture();
                     voiture.setImmatriculation(resultSet.getString("Immatriculation"));
                     voiture.setNombreDePlace(resultSet.getInt("nombreDePlace"));
                     voiture.setMarque(resultSet.getString("marque"));
@@ -53,12 +53,12 @@ public class RechercherVoitureByImtServlet extends HttpServlet {
                     voiture.setTypeCarburant(resultSet.getString("typeCarburant"));
                     voiture.setCategorie(resultSet.getString("categorie"));
                     voiture.setPrixDeLocationParJour(resultSet.getInt("prixDeLocationParJour"));
-                    voitures.add(voiture);
+                    voiture.setStatus(resultSet.getString("status"));
                 }
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return voitures;
+        return voiture;
     }
 }
